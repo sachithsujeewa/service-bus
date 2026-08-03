@@ -1,0 +1,35 @@
+{
+  "chapter": "11-New-System",
+  "description": "Modernization discovery, migration, target architecture, ASUC seeds",
+  "nodes": [
+    { "id": "modernization-charter", "type": "program", "layer": "Program" },
+    { "id": "as-implemented-contract-summary", "type": "discovery", "layer": "Discovery" },
+    { "id": "architectural-concerns-register", "type": "concern-register", "layer": "Concerns" },
+    { "id": "preserve-vs-replace-contract", "type": "migration", "layer": "Migration" },
+    { "id": "broker-evaluation-summary", "type": "migration", "layer": "Migration" },
+    { "id": "target-platform-direction", "type": "architecture-target", "layer": "Target" },
+    { "id": "broker-decision-pending", "type": "decision", "layer": "Decisions" },
+    { "id": "delivery-guarantees-analysis", "type": "concern-analysis", "layer": "Concerns" },
+    { "id": "ha-dr-concerns", "type": "concern-analysis", "layer": "Concerns" },
+    { "id": "use-case-catalog-for-architects", "type": "use-case-catalog", "layer": "Use-Cases" },
+    { "id": "uc-failover-active-passive", "type": "use-case-seed", "layer": "Use-Cases" },
+    { "id": "uc-zero-disruption-cutover", "type": "use-case-seed", "layer": "Use-Cases" }
+  ],
+  "edges": [
+    { "from": "modernization-charter", "relation": "requires", "to": "preserve-vs-replace-contract" },
+    { "from": "as-implemented-contract-summary", "relation": "preserves_contract_from", "to": "preserve-vs-replace-contract" },
+    { "from": "migration-drivers-and-concerns", "relation": "produces", "to": "architectural-concerns-register" },
+    { "from": "architectural-concerns-register", "relation": "feeds", "to": "use-case-catalog-for-architects" },
+    { "from": "broker-evaluation-summary", "relation": "affects", "to": "broker-decision-pending" },
+    { "from": "broker-decision-pending", "relation": "blocks", "to": "target-platform-direction" },
+    { "from": "delivery-guarantees-analysis", "relation": "validates", "to": "preserve-vs-replace-contract" },
+    { "from": "ha-dr-concerns", "relation": "explains", "to": "uc-failover-active-passive" },
+    { "from": "modernization-charter", "relation": "requires", "to": "uc-zero-disruption-cutover" },
+    { "from": "as-implemented-contract-summary", "relation": "contrasts_with", "to": "architecture-overview-legacy", "note": "10-Knowledge hub - link in Obsidian" }
+  ],
+  "legacy_cross_links": [
+    "10-Knowledge/Architecture/architecture-overview",
+    "10-Knowledge/Design/routing-and-filter-design",
+    "10-Knowledge/Design/retry-error-and-sequence-handling"
+  ]
+}

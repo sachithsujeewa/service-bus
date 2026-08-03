@@ -1,0 +1,15 @@
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\bin\Release\net8.0\ServiceBus.Messaging.deps.json
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\bin\Release\net8.0\ServiceBus.Messaging.dll
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\bin\Release\net8.0\ServiceBus.Messaging.pdb
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\bin\Release\net8.0\ServiceBus.Contracts.dll
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\bin\Release\net8.0\ServiceBus.Contracts.pdb
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.csproj.AssemblyReference.cache
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.AssemblyInfoInputs.cache
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.AssemblyInfo.cs
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.csproj.CoreCompileInputs.cache
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceB.89E757D3.Up2Date
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.dll
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\refint\ServiceBus.Messaging.dll
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ServiceBus.Messaging.pdb
+c:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Release\net8.0\ref\ServiceBus.Messaging.dll

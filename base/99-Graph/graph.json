@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "Raw Note",
+      "type": "raw"
+    },
+    {
+      "id": "Concept",
+      "type": "concept"
+    },
+    {
+      "id": "Prerequisite",
+      "type": "concept"
+    },
+    {
+      "id": "Example",
+      "type": "example"
+    },
+    {
+      "id": "Review",
+      "type": "review"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Raw Note",
+      "relation": "produces",
+      "to": "Concept"
+    },
+    {
+      "from": "Concept",
+      "relation": "requires",
+      "to": "Prerequisite"
+    },
+    {
+      "from": "Concept",
+      "relation": "explained_by",
+      "to": "Example"
+    },
+    {
+      "from": "Review",
+      "relation": "validates",
+      "to": "Concept"
+    }
+  ]
+}

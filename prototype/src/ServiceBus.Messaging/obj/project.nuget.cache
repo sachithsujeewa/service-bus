@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "53e1o1hvwVQ=",
+  "success": true,
+  "projectFilePath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Messaging\\ServiceBus.Messaging.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\rabbitmq.client\\7.2.1\\rabbitmq.client.7.2.1.nupkg.sha512",
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\microsoft.netcore.app.ref\\8.0.29\\microsoft.netcore.app.ref.8.0.29.nupkg.sha512",
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\microsoft.windowsdesktop.app.ref\\8.0.29\\microsoft.windowsdesktop.app.ref.8.0.29.nupkg.sha512",
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget\\microsoft.aspnetcore.app.ref\\8.0.29\\microsoft.aspnetcore.app.ref.8.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

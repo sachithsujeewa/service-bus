@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-ServiceBus.Dispatcher-90c78522-14f1-4109-a290-2a78c37f6f6b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Npgsql" Version="10.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceBus.Contracts\ServiceBus.Contracts.csproj" />
+    <ProjectReference Include="..\ServiceBus.Messaging\ServiceBus.Messaging.csproj" />
+  </ItemGroup>
+</Project>

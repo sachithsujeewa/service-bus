@@ -1,0 +1,107 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: rambase
+      POSTGRES_PASSWORD: rambase
+      POSTGRES_DB: rambase_bus
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rambase -d rambase_bus"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: rambase
+      RABBITMQ_DEFAULT_PASS: rambase
+      RABBITMQ_DEFAULT_VHOST: rambase
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "check_port_connectivity"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+      start_period: 20s
+
+  service-bus-api:
+    build:
+      context: .
+      dockerfile: src/ServiceBus.Api/Dockerfile
+    restart: unless-stopped
+    environment:
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=rambase_bus;Username=rambase;Password=rambase
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: "5672"
+      RabbitMq__User: rambase
+      RabbitMq__Password: rambase
+      RabbitMq__VHost: rambase
+      Auth__SourceApiKey: source-dev-key
+      Auth__PartnerApiKey: partner-dev-key
+      Auth__AdminApiKey: admin-dev-key
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  service-bus-dispatcher:
+    build:
+      context: .
+      dockerfile: src/ServiceBus.Dispatcher/Dockerfile
+    restart: unless-stopped
+    environment:
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=rambase_bus;Username=rambase;Password=rambase
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: "5672"
+      RabbitMq__User: rambase
+      RabbitMq__Password: rambase
+      RabbitMq__VHost: rambase
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      service-bus-api:
+        condition: service_started
+
+  partner-app:
+    build:
+      context: .
+      dockerfile: src/PartnerApp/Dockerfile
+    restart: unless-stopped
+    environment:
+      ServiceBus__BaseUrl: http://service-bus-api:8080
+      ServiceBus__PartnerApiKey: partner-dev-key
+      Partner__PublicWebhookUrl: http://partner-app:5102/webhook
+      Partner__HmacSecret: demo-hmac-secret
+    ports:
+      - "5102:5102"
+    depends_on:
+      service-bus-api:
+        condition: service_started
+      service-bus-dispatcher:
+        condition: service_started
+
+  source-app:
+    build:
+      context: .
+      dockerfile: src/SourceApp/Dockerfile
+    restart: unless-stopped
+    environment:
+      ServiceBus__BaseUrl: http://service-bus-api:8080
+      ServiceBus__SourceApiKey: source-dev-key
+    ports:
+      - "5101:5101"
+    depends_on:
+      partner-app:
+        condition: service_started
+      service-bus-api:
+        condition: service_started
