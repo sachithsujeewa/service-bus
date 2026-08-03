@@ -1,0 +1,49 @@
+---
+description: Log user questions and session outcomes in diagrams/chat-history/ after meaningful work
+alwaysApply: true
+---
+
+# Chat history logging (mandatory)
+
+This workspace maintains an **observable log** in `diagrams/chat-history/`. New chat sessions must continue it.
+
+## When to log
+
+After any session with **non-trivial work** (code, docs, architecture, troubleshooting, demo changes):
+
+1. **Before ending** — update logs (do not skip if user did not ask).
+2. **Each user message** that requests work → one row in `USER-REQUEST-LOG.md` (next `U-0XX` ID).
+
+## Files to update (checklist)
+
+| Step | File | Action |
+|------|------|--------|
+| 1 | `diagrams/chat-history/USER-REQUEST-LOG.md` | Add rows: ID, category, "You asked", outcome |
+| 2 | `diagrams/chat-history/YYYY-MM-DD-topic.md` | Create or append session; include **User requests** table |
+| 3 | `diagrams/chat-history/INDEX.md` | Add timeline row if new session day/topic |
+| 4 | `diagrams/README.md` | Update chat-history table only if new session file |
+
+Use template: `diagrams/chat-history/_TEMPLATE-session.md`
+
+## Request categories
+
+`discovery` · `architecture` · `implementation` · `demo` · `troubleshooting` · `documentation`
+
+## User request row format
+
+```markdown
+| U-0XX | category | Short summary of user question | What was delivered (paths) |
+```
+
+## Session sections (agent side)
+
+Goal · User requests · Decisions · Artifacts · Diagrams updated · Open items
+
+## Do not
+
+- Bulk-copy `_intake/` prose into vault or logs
+- Create duplicate diagram ASCII in vault — link `diagrams/`
+
+## Onboarding
+
+Read `diagrams/chat-history/INDEX.md` and `AGENTS.md` at repo root when context is unclear.

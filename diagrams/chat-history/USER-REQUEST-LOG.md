@@ -53,7 +53,8 @@ For agent decisions and technical fixes, see session files in [INDEX.md](INDEX.m
 | U-020 | troubleshooting | One event → 4 records on partner inbox `:5102` | Duplicate webhook registrations; idempotent register + delivery dedupe; `down -v` for clean DB |
 | U-021 | troubleshooting | `docker compose up -d --build` fails on `partner-app` publish | `PartnerApp/Dockerfile` missing `ServiceBus.Contracts` |
 | U-022 | documentation | Chat history not properly documented | `2026-08-03` session log, `INDEX.md`, updated README |
-| U-023 | documentation | Log what I asked as well in a proper manner | This file + **User requests** sections in session logs |
+| U-023 | documentation | Log what I asked in a proper manner | [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) + session **User requests** tables |
+| U-024 | documentation | Logging mechanism for all future chats (observable for new sessions) | `.cursor/rules/chat-history-logging.mdc`, `AGENTS.md`, `SESSION-CHECKLIST.md`, templates |
 
 ---
 
@@ -69,7 +70,7 @@ For agent decisions and technical fixes, see session files in [INDEX.md](INDEX.m
 | Demo / testing | U-013, U-014, U-015, U-017 |
 | UI issues | U-016, U-018 |
 | Partner inbox duplicates | U-020 |
-| Chat / documentation | U-009, U-022, U-023 |
+| Chat / documentation | U-009, U-022, U-023, U-024 |
 
 ---
 

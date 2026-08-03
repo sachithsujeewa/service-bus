@@ -4,8 +4,10 @@ Curated session logs for the Service Bus workspace.
 
 | Document | Use when you want… |
 |----------|-------------------|
-| **[USER-REQUEST-LOG.md](USER-REQUEST-LOG.md)** | **What you asked** (U-001 …) — questions, intent, outcomes |
-| Session files below | What the agent built, fixed, decided |
+| **[USER-REQUEST-LOG.md](USER-REQUEST-LOG.md)** | **What you asked** (U-001 …) |
+| **[SESSION-CHECKLIST.md](SESSION-CHECKLIST.md)** | End-of-session agent checklist |
+| [../../AGENTS.md](../../AGENTS.md) | New chat onboarding |
+| Session files below | Agent work, decisions, artifacts |
 | [README.md](README.md) | How to maintain logs |
 
 ## Timeline

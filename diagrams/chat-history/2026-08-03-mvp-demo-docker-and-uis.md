@@ -21,6 +21,7 @@ Full user question log: [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) (U-011 throug
 | U-021 | troubleshooting | `partner-app` Docker build error | Fixed Dockerfile (Contracts project) |
 | U-022 | documentation | Chat history not documented | Session logs + INDEX |
 | U-023 | documentation | Log what I asked properly | [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) |
+| U-024 | documentation | Persistent logging for future chats | `AGENTS.md`, Cursor rule, SESSION-CHECKLIST |
 
 ## Goal
 
@@ -69,6 +70,10 @@ Full user question log: [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) (U-011 throug
 | `prototype/src/ServiceBus.Messaging/RabbitMqTopology.cs` | Connection retry |
 | `prototype/docker-compose.yml` | RabbitMQ healthcheck, restart policies |
 | Idempotent webhook + dispatcher dedupe | `DatabaseService`, `PartnerApp`, `DispatcherWorker` |
+| `.cursor/rules/chat-history-logging.mdc` | Always-on Cursor rule for session logging |
+| `AGENTS.md` | Repo root agent onboarding |
+| `diagrams/chat-history/SESSION-CHECKLIST.md` | End-of-session checklist |
+| `diagrams/chat-history/_TEMPLATE-session.md` | Session file template |
 
 ## Demo flow (current)
 

@@ -53,7 +53,9 @@ diagrams/
 |------|--------|
 | [INDEX.md](chat-history/INDEX.md) | Master timeline |
 | [USER-REQUEST-LOG.md](chat-history/USER-REQUEST-LOG.md) | **Your questions** (U-001 …) |
-| [README.md](chat-history/README.md) | How to maintain logs |
+| — | [README.md](chat-history/README.md) | How to maintain logs |
+| — | [SESSION-CHECKLIST.md](chat-history/SESSION-CHECKLIST.md) | Agent end-of-session checklist |
+| — | [_TEMPLATE-session.md](chat-history/_TEMPLATE-session.md) | New session file template |
 | [2026-07-30-service-bus-vault-and-mvp.md](chat-history/2026-07-30-service-bus-vault-and-mvp.md) | Vault + MVP scaffold |
 | [2026-08-03-mvp-demo-docker-and-uis.md](chat-history/2026-08-03-mvp-demo-docker-and-uis.md) | Docker demo, UIs, fixes |
 
@@ -61,7 +63,7 @@ diagrams/
 
 1. **New diagram** → add file under the right subfolder + row in this README.
 2. **Update diagram** → edit file here; vault notes keep a one-line link only.
-3. **Chat session** → add `chat-history/YYYY-MM-DD-topic.md` + row in `chat-history/INDEX.md`.
+3. **Chat session** → follow [chat-history/SESSION-CHECKLIST.md](chat-history/SESSION-CHECKLIST.md); rule `.cursor/rules/chat-history-logging.mdc`.
 4. Prefer ASCII in `.md` for Obsidian/git diff; optional Mermaid block in same file.
 
 ## Vault links

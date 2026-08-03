@@ -19,18 +19,23 @@ Curated summaries of Cursor agent sessions for the Service Bus workspace.
 | Date | File | Summary |
 |------|------|---------|
 | — | [INDEX.md](INDEX.md) | Master timeline |
-| — | [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) | **Your questions** (U-001 … U-023) |
+| — | [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) | **Your questions** (U-001 … U-024) |
+| — | [SESSION-CHECKLIST.md](SESSION-CHECKLIST.md) | **Agent checklist** (end of session) |
+| — | [_TEMPLATE-session.md](_TEMPLATE-session.md) | Copy for new session files |
 | 2026-07-30 | [2026-07-30-service-bus-vault-and-mvp.md](2026-07-30-service-bus-vault-and-mvp.md) | Vault, MVP scaffold, diagrams |
 | 2026-08-03 | [2026-08-03-mvp-demo-docker-and-uis.md](2026-08-03-mvp-demo-docker-and-uis.md) | Docker demo, UIs, fixes |
 
 ## How to maintain
 
-After each meaningful session:
+After each meaningful session — **see [SESSION-CHECKLIST.md](SESSION-CHECKLIST.md)**:
 
 1. **User requests** — add rows to [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) (new `U-0XX` IDs).
-2. **Session file** — create `YYYY-MM-DD-topic.md` with **User requests** table + agent sections below.
+2. **Session file** — create from [_TEMPLATE-session.md](_TEMPLATE-session.md) or append to today's file.
 3. **INDEX.md** — add timeline row.
 4. Optional: export Cursor `.jsonl` to this folder.
+
+**Automated for Cursor:** rule `.cursor/rules/chat-history-logging.mdc` (`alwaysApply: true`).  
+**Onboarding:** repo root [AGENTS.md](../../AGENTS.md).
 
 ## Session file template
 
