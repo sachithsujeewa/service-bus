@@ -17,7 +17,7 @@ public sealed class InMemoryWebhookDispatcher : BackgroundService
     private readonly InMemoryMessageBus _bus;
     private readonly IDataStore _data;
     private readonly ILogger<InMemoryWebhookDispatcher> _logger;
-    private readonly HttpClient _httpClient = new() { Timeout = TimeSpan.FromSeconds(30) };
+    private readonly HttpClient _httpClient = WebhookHttp.CreateClient(TimeSpan.FromSeconds(30));
     private List<WebhookRegistration> _webhooks = new();
     private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
 
@@ -58,6 +58,8 @@ public sealed class InMemoryWebhookDispatcher : BackgroundService
     private async Task HandleDeliveryAsync(BusMessage msg, CancellationToken ct)
     {
         EventEnvelope? envelope = null;
+        var deliveredUrls = new HashSet<string>(msg.DeliveredUrls ?? [], StringComparer.OrdinalIgnoreCase);
+
         try
         {
             envelope = JsonSerializer.Deserialize<EventEnvelope>(msg.Json, JsonOptions);
@@ -71,10 +73,32 @@ public sealed class InMemoryWebhookDispatcher : BackgroundService
                 return;
             }
 
-            foreach (var webhook in matches
+            var pendingTargets = matches
                 .GroupBy(w => w.TargetUrl, StringComparer.OrdinalIgnoreCase)
-                .Select(g => g.First()))
-                await PostWebhookAsync(envelope, webhook, ct);
+                .Select(g => g.First())
+                .Where(w => !deliveredUrls.Contains(w.TargetUrl))
+                .ToList();
+
+            if (pendingTargets.Count == 0)
+                return;
+
+            Exception? lastFailure = null;
+            foreach (var webhook in pendingTargets)
+            {
+                try
+                {
+                    await PostWebhookAsync(envelope, webhook, ct);
+                    deliveredUrls.Add(webhook.TargetUrl);
+                }
+                catch (Exception ex)
+                {
+                    lastFailure = ex;
+                    _logger.LogError(ex, "Failed to deliver {MessageId} to {Url}", envelope.MessageId, webhook.TargetUrl);
+                }
+            }
+
+            if (lastFailure is not null)
+                throw lastFailure;
         }
         catch (Exception ex)
         {
@@ -84,7 +108,7 @@ public sealed class InMemoryWebhookDispatcher : BackgroundService
             else
             {
                 await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, msg.RetryCount + 1)), ct);
-                await _bus.RequeueDeliveryAsync(msg, ct);
+                await _bus.RequeueDeliveryAsync(msg, deliveredUrls.ToList(), ct);
             }
         }
     }
@@ -97,12 +121,20 @@ public sealed class InMemoryWebhookDispatcher : BackgroundService
             Content = new StringContent(body, Encoding.UTF8, "application/json")
         };
         request.Headers.TryAddWithoutValidation("X-Rambase-EventID", envelope.MessageId);
+        WebhookHttp.ApplyDevHostHeader(request, webhook.TargetUrl);
         if (!string.IsNullOrEmpty(webhook.HmacSecret))
             request.Headers.TryAddWithoutValidation("X-Rambase-Signature", ComputeHmac(body, webhook.HmacSecret));
 
         var response = await _httpClient.SendAsync(request, ct);
         if (!response.IsSuccessStatusCode)
-            throw new HttpRequestException($"Webhook POST returned {response.StatusCode}");
+        {
+            var detail = response.StatusCode.ToString();
+            if ((int)response.StatusCode is >= 300 and < 400
+                && response.Headers.Location is { } location)
+                detail += $" → {location} (webhook delivery does not follow redirects; use an anonymous handler URL)";
+
+            throw new HttpRequestException($"Webhook POST returned {detail}");
+        }
 
         _logger.LogInformation("Delivered {MessageId} to {Url}", envelope.MessageId, webhook.TargetUrl);
     }

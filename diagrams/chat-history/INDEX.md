@@ -16,6 +16,9 @@ Curated session logs for the Service Bus workspace.
 |------|---------|--------|
 | 2026-07-30 | [service-bus-vault-and-mvp](2026-07-30-service-bus-vault-and-mvp.md) | Vault bootstrap, `11-New-System/`, MVP scaffold, `diagrams/` library, WSL blocked |
 | 2026-08-03 | [mvp-demo-docker-and-uis](2026-08-03-mvp-demo-docker-and-uis.md) | WSL fixed, end-to-end Docker demo, browser UIs, webhook dedupe, build fixes |
+| 2026-08-11 | [webhook-routing-retry](2026-08-11-webhook-routing-retry.md) | Custom webhook to host machine; infinite partner inbox retry; dispatcher fix |
+| 2026-08-12 | [vault-architecture-overview](2026-08-12-vault-architecture-overview.md) | Explained Obsidian vault architecture (chapters, maps, pipeline) |
+| 2026-08-12 | [webhook-vs-breakpoint](2026-08-12-webhook-vs-breakpoint.md) | VS breakpoint on PrintEventReceiver; dispatcher reaches ashx with HTTP 400 |
 
 ## Quick “what happened when”
 

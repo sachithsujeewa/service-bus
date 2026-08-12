@@ -1166,17 +1166,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget": {},
+    "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\80370751b0568dd6e16b97a383cd09b2\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\ServiceBus.Api.csproj",
+      "projectUniqueName": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\ServiceBus.Api.csproj",
       "projectName": "ServiceBus.Api",
-      "projectPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\ServiceBus.Api.csproj",
-      "packagesPath": "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget",
-      "outputPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\obj\\",
+      "projectPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\ServiceBus.Api.csproj",
+      "packagesPath": "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\80370751b0568dd6e16b97a383cd09b2\\nuget",
+      "outputPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1199,11 +1199,11 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Contracts\\ServiceBus.Contracts.csproj": {
-              "projectPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Contracts\\ServiceBus.Contracts.csproj"
+            "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Contracts\\ServiceBus.Contracts.csproj": {
+              "projectPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Contracts\\ServiceBus.Contracts.csproj"
             },
-            "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Messaging\\ServiceBus.Messaging.csproj": {
-              "projectPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Messaging\\ServiceBus.Messaging.csproj"
+            "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Messaging\\ServiceBus.Messaging.csproj": {
+              "projectPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\ServiceBus.Messaging\\ServiceBus.Messaging.csproj"
             }
           }
         }

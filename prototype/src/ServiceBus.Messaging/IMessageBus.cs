@@ -8,4 +8,8 @@ public interface IMessageBus
     Task PublishManagementAsync(ManagementMessage message);
 }
 
-public sealed record BusMessage(string Json, string? MessageId, int RetryCount = 0);
+public sealed record BusMessage(
+    string Json,
+    string? MessageId,
+    int RetryCount = 0,
+    IReadOnlyList<string>? DeliveredUrls = null);

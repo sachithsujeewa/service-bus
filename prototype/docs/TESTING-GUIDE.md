@@ -119,6 +119,10 @@ Pre-filled in the control panel UI. **Not for production.**
 | Partner count stays 0 | Check dispatcher logs: `docker compose logs service-bus-dispatcher` |
 | API crash loop | Postgres down → `docker compose up -d` |
 | Partner inbox shows 4× same event | Duplicate webhook registrations — see below |
+| Partner inbox floods same event every ~2s | One webhook failed (often `localhost` from Docker) + retry bug — see below |
+| Custom webhook on host machine not reached | Use `http://host.docker.internal:PORT/...` not `localhost` from control panel |
+| HTTPS host webhook → DLQ “SSL connection could not be established” | Rebuild dispatcher (trusts IIS Express / VS cert for host.docker.internal); or register the HTTP URL instead |
+| HTTPS host webhook → DLQ “Connection refused (localhost:…)” | Site redirected to `https://localhost:…` (login). Register an **anonymous** handler URL (like PrintEventReceiver.ashx), not the site root |
 | Webhook not registered | Partner app logs on startup; or register via http://localhost:8080/ |
 
 ### Partner inbox: 4 records for 1 event
@@ -135,6 +139,34 @@ docker compose up -d --build
 ```
 
 After rebuild, idempotent registration + dedupe by target URL prevents this going forward.
+
+### Partner inbox: endless duplicate events (every ~2 seconds)
+
+The dispatcher delivers to **every active webhook** that matches the event type. If you register an extra webhook (e.g. `PrintEventReceiver.ashx` on your Windows host) **and** the built-in partner webhook is still registered, both receive the event.
+
+If the new URL is unreachable from the dispatcher container, delivery fails and retries. Previously this re-posted to webhooks that had already succeeded (partner inbox spam). Fixed in dispatcher: retries skip already-delivered URLs and stop after 4 attempts (then DLQ).
+
+**Registering a host-machine webhook from Docker:**
+
+| Wrong | Right |
+|-------|-------|
+| `http://localhost:53174/PrintEventReceiver.ashx` | `http://host.docker.internal:53174/PrintEventReceiver.ashx` |
+
+Inside a container, `localhost` is the container — not your PC. Any host port works (`:53174`, `:44300`, …).
+
+The dispatcher rewrites `Host: host.docker.internal:PORT` → `Host: localhost:PORT` so **IIS Express / Visual Studio** accept the request (otherwise you get `400 Invalid Hostname`).
+
+For **HTTPS** (`https://host.docker.internal:44394/...`), the dispatcher trusts the local/dev certificate for that host (container trust store does not include the IIS Express cert). Prefer the site’s **HTTP** URL when you have one.
+
+**To test only your endpoint:** open http://localhost:8080/ → **Refresh list** under Webhooks, then delete the partner webhook (or stop `partner-app` and delete its registration):
+
+```bash
+# List webhooks (admin sees all)
+curl -H "X-Api-Key: admin-dev-key" http://localhost:8080/api/webhooks
+
+# Delete partner webhook by id
+curl -X DELETE -H "X-Api-Key: partner-dev-key" http://localhost:8080/api/webhooks/<webhook-id>
+```
 
 **Full reset:**
 

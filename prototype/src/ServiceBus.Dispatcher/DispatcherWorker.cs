@@ -14,6 +14,9 @@ namespace ServiceBus.Dispatcher;
 
 public sealed class DispatcherWorker : BackgroundService
 {
+    private const string RetryCountHeader = "x-retry-count";
+    private const string DeliveredUrlsHeader = "x-delivered-urls";
+
     private readonly ILogger<DispatcherWorker> _logger;
     private readonly RabbitMqOptions _rabbitOptions;
     private readonly string _postgresConnection;
@@ -26,7 +29,7 @@ public sealed class DispatcherWorker : BackgroundService
         _logger = logger;
         _rabbitOptions = rabbitOptions;
         _postgresConnection = postgresConnection;
-        _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
+        _httpClient = WebhookHttp.CreateClient(TimeSpan.FromSeconds(30));
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -73,6 +76,8 @@ public sealed class DispatcherWorker : BackgroundService
     {
         var json = Encoding.UTF8.GetString(ea.Body.ToArray());
         EventEnvelope? envelope = null;
+        var deliveredUrls = new HashSet<string>(GetDeliveredUrls(ea.BasicProperties), StringComparer.OrdinalIgnoreCase);
+
         try
         {
             envelope = JsonSerializer.Deserialize<EventEnvelope>(json, JsonOptions);
@@ -88,24 +93,42 @@ public sealed class DispatcherWorker : BackgroundService
             }
 
             // One POST per target URL (duplicate registrations should not multiply delivery)
-            var distinctTargets = matches
+            var pendingTargets = matches
                 .GroupBy(w => w.TargetUrl, StringComparer.OrdinalIgnoreCase)
                 .Select(g => g.First())
+                .Where(w => !deliveredUrls.Contains(w.TargetUrl))
                 .ToList();
 
-            foreach (var webhook in distinctTargets)
+            if (pendingTargets.Count == 0)
             {
-                await PostWebhookAsync(envelope, webhook, ct);
+                await channel.BasicAckAsync(ea.DeliveryTag, false, ct);
+                return;
             }
+
+            Exception? lastFailure = null;
+            foreach (var webhook in pendingTargets)
+            {
+                try
+                {
+                    await PostWebhookAsync(envelope, webhook, ct);
+                    deliveredUrls.Add(webhook.TargetUrl);
+                }
+                catch (Exception ex)
+                {
+                    lastFailure = ex;
+                    _logger.LogError(ex, "Failed to deliver {MessageId} to {Url}", envelope.MessageId, webhook.TargetUrl);
+                }
+            }
+
+            if (lastFailure is not null)
+                throw lastFailure;
 
             await channel.BasicAckAsync(ea.DeliveryTag, false, ct);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Delivery failed for message {Tag}", ea.DeliveryTag);
-            var attempt = ea.BasicProperties.Headers?.ContainsKey("x-retry-count") == true
-                ? Convert.ToInt32(ea.BasicProperties.Headers["x-retry-count"])
-                : 0;
+            var attempt = GetRetryCount(ea.BasicProperties);
 
             if (attempt >= 4)
             {
@@ -115,7 +138,9 @@ public sealed class DispatcherWorker : BackgroundService
             else
             {
                 await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, attempt + 1)), ct);
-                await channel.BasicNackAsync(ea.DeliveryTag, false, true, ct);
+                if (envelope is not null)
+                    await RepublishForRetryAsync(channel, json, envelope, attempt + 1, deliveredUrls, ct);
+                await channel.BasicAckAsync(ea.DeliveryTag, false, ct);
             }
         }
     }
@@ -128,6 +153,7 @@ public sealed class DispatcherWorker : BackgroundService
             Content = new StringContent(body, Encoding.UTF8, "application/json")
         };
         request.Headers.TryAddWithoutValidation("X-Rambase-EventID", envelope.MessageId);
+        WebhookHttp.ApplyDevHostHeader(request, webhook.TargetUrl);
 
         if (!string.IsNullOrEmpty(webhook.HmacSecret))
         {
@@ -137,7 +163,14 @@ public sealed class DispatcherWorker : BackgroundService
 
         var response = await _httpClient.SendAsync(request, ct);
         if (!response.IsSuccessStatusCode)
-            throw new HttpRequestException($"Webhook POST {webhook.TargetUrl} returned {response.StatusCode}");
+        {
+            var detail = response.StatusCode.ToString();
+            if ((int)response.StatusCode is >= 300 and < 400
+                && response.Headers.Location is { } location)
+                detail += $" → {location} (webhook delivery does not follow redirects; use an anonymous handler URL)";
+
+            throw new HttpRequestException($"Webhook POST {webhook.TargetUrl} returned {detail}");
+        }
 
         _logger.LogInformation("Delivered {MessageId} to {Url}", envelope.MessageId, webhook.TargetUrl);
     }
@@ -146,6 +179,65 @@ public sealed class DispatcherWorker : BackgroundService
     {
         using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret));
         return Convert.ToHexString(hmac.ComputeHash(Encoding.UTF8.GetBytes(body))).ToLowerInvariant();
+    }
+
+    private static int GetRetryCount(IReadOnlyBasicProperties? properties)
+    {
+        if (properties?.Headers?.TryGetValue(RetryCountHeader, out var value) != true || value is null)
+            return 0;
+
+        return value switch
+        {
+            int i => i,
+            long l => (int)l,
+            byte[] bytes => int.TryParse(Encoding.UTF8.GetString(bytes), out var parsed) ? parsed : 0,
+            _ => Convert.ToInt32(value)
+        };
+    }
+
+    private static IEnumerable<string> GetDeliveredUrls(IReadOnlyBasicProperties? properties)
+    {
+        if (properties?.Headers?.TryGetValue(DeliveredUrlsHeader, out var value) != true || value is null)
+            return [];
+
+        var raw = value switch
+        {
+            string s => s,
+            byte[] bytes => Encoding.UTF8.GetString(bytes),
+            _ => value.ToString() ?? string.Empty
+        };
+
+        return raw.Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+    }
+
+    private static async Task RepublishForRetryAsync(
+        IChannel channel,
+        string json,
+        EventEnvelope envelope,
+        int retryCount,
+        IReadOnlyCollection<string> deliveredUrls,
+        CancellationToken ct)
+    {
+        var props = new BasicProperties
+        {
+            ContentType = "application/json",
+            MessageId = envelope.MessageId,
+            DeliveryMode = DeliveryModes.Persistent,
+            Headers = new Dictionary<string, object?>
+            {
+                [RetryCountHeader] = retryCount,
+                [DeliveredUrlsHeader] = string.Join('\n', deliveredUrls)
+            }
+        };
+
+        var routingKey = $"{MessageTopology.EventRoutingKeyPrefix}{envelope.SystemId}";
+        await channel.BasicPublishAsync(
+            MessageTopology.EventsExchange,
+            routingKey,
+            false,
+            props,
+            Encoding.UTF8.GetBytes(json),
+            ct);
     }
 
     private async Task RefreshWebhooksAsync()

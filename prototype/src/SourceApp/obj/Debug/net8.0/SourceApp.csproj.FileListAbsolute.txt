@@ -26,3 +26,4 @@ C:\POC\ServiceBusWorkspace\prototype\src\SourceApp\obj\Debug\net8.0\refint\Sourc
 C:\POC\ServiceBusWorkspace\prototype\src\SourceApp\obj\Debug\net8.0\SourceApp.pdb
 C:\POC\ServiceBusWorkspace\prototype\src\SourceApp\obj\Debug\net8.0\SourceApp.genruntimeconfig.cache
 C:\POC\ServiceBusWorkspace\prototype\src\SourceApp\obj\Debug\net8.0\ref\SourceApp.dll
+C:\POC\ServiceBusWorkspace\prototype\src\SourceApp\obj\Debug\net8.0\SourceApp.sourcelink.json

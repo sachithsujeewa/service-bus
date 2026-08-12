@@ -56,20 +56,36 @@ For agent decisions and technical fixes, see session files in [INDEX.md](INDEX.m
 | U-023 | documentation | Log what I asked in a proper manner | [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) + session **User requests** tables |
 | U-024 | documentation | Logging mechanism for all future chats (observable for new sessions) | `.cursor/rules/chat-history-logging.mdc`, `AGENTS.md`, `SESSION-CHECKLIST.md`, templates |
 
+## 2026-08-11 — Webhook routing & retry fix
+
+| # | Category | You asked | Outcome |
+|---|----------|-----------|---------|
+| U-025 | troubleshooting | Register new webhook `localhost:53174/PrintEventReceiver.ashx` — events flood partner app, not new URL | Diagnosed Docker `localhost` + infinite retry + all-or-nothing delivery; fixed `DispatcherWorker` + `InMemoryWebhookDispatcher`; `TESTING-GUIDE.md` host.docker.internal guidance |
+
+## 2026-08-12 — Vault architecture overview
+
+| # | Category | You asked | Outcome |
+|---|----------|-----------|---------|
+| U-026 | architecture | Explain architecture of this vault | Explained folder map, two chapters (10 vs 11), knowledge chain, agentic pipeline, workspace relationships |
+| U-027 | troubleshooting | After registering `host.docker.internal:53174/PrintEventReceiver.ashx`, should VS breakpoint on ProcessRequest hit on publish? | Curl hits BP; bus gets HTTP 400 Invalid Hostname — IIS Express rejects `Host: host.docker.internal` |
+| U-028 | implementation | Allow any port if request comes from localhost or host.docker.internal | Dispatcher rewrites `Host` for `host.docker.internal:any-port` → `localhost:port` (IIS Express) |
+| U-029 | troubleshooting | Register `https://host.docker.internal:44394/` — no login BP; DLQ SSL errors | Dev HttpClient trusts local HTTPS certs for host.docker.internal; rebuild dispatcher |
+| U-030 | troubleshooting | HTTP :53174 hits BP; HTTPS :44394 still does not | Root cause: 302 → `localhost` followed from Docker (`Connection refused`); disabled auto-redirect; need anonymous handler URL |
+
 ---
 
 ## Quick lookup by topic
 
 | Topic | Request IDs |
 |-------|-------------|
-| Vault / knowledge graph | U-002, U-003 |
-| New system vs legacy | U-003, U-004 |
+| Vault / knowledge graph | U-002, U-003, U-026 |
+| New system vs legacy | U-003, U-004, U-026 |
 | MVP design & prototype | U-005, U-006 |
 | Diagrams folder | U-009, U-010 |
 | Docker / WSL | U-007, U-008, U-011, U-019, U-021 |
 | Demo / testing | U-013, U-014, U-015, U-017 |
 | UI issues | U-016, U-018 |
-| Partner inbox duplicates | U-020 |
+| Partner inbox duplicates | U-020, U-025 |
 | Chat / documentation | U-009, U-022, U-023, U-024 |
 
 ---

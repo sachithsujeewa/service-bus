@@ -9,3 +9,4 @@ C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Contracts\obj\Debug\net8.0\S
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Contracts\obj\Debug\net8.0\refint\ServiceBus.Contracts.dll
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Contracts\obj\Debug\net8.0\ServiceBus.Contracts.pdb
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Contracts\obj\Debug\net8.0\ref\ServiceBus.Contracts.dll
+C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Contracts\obj\Debug\net8.0\ServiceBus.Contracts.sourcelink.json

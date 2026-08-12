@@ -81,7 +81,9 @@ internal static class DemoUi
             <div class="row"><label>API key (partner)</label>
               <input id="partnerKey" value="partner-dev-key"/></div>
             <div class="row"><label>Target URL</label>
-              <input id="targetUrl" value="http://partner-app:5102/webhook"/></div>
+              <input id="targetUrl" value="http://host.docker.internal:53174/PrintEventReceiver.ashx"
+                     title="Use host.docker.internal (not localhost) for endpoints on your PC when running Docker"/></div>
+            <p class="sub" style="margin-top:0.25rem">From Docker, use <code>host.docker.internal:&lt;any-port&gt;</code> for URLs on your machine (IIS Express Host header is rewritten to localhost). All matching webhooks receive each event — delete the partner webhook if you only want yours.</p>
             <div class="row"><label>Event type</label><input id="regEventType" value="OrderCreated"/></div>
             <div class="row"><label>HMAC secret</label><input id="hmacSecret" value="demo-hmac-secret"/></div>
             <button onclick="registerWebhook()">Register</button>

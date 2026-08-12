@@ -58,6 +58,9 @@ diagrams/
 | — | [_TEMPLATE-session.md](chat-history/_TEMPLATE-session.md) | New session file template |
 | [2026-07-30-service-bus-vault-and-mvp.md](chat-history/2026-07-30-service-bus-vault-and-mvp.md) | Vault + MVP scaffold |
 | [2026-08-03-mvp-demo-docker-and-uis.md](chat-history/2026-08-03-mvp-demo-docker-and-uis.md) | Docker demo, UIs, fixes |
+| [2026-08-11-webhook-routing-retry.md](chat-history/2026-08-11-webhook-routing-retry.md) | Custom host webhook; partner inbox retry fix |
+| [2026-08-12-vault-architecture-overview.md](chat-history/2026-08-12-vault-architecture-overview.md) | Explained Obsidian vault architecture |
+| [2026-08-12-webhook-vs-breakpoint.md](chat-history/2026-08-12-webhook-vs-breakpoint.md) | VS ashx breakpoint / host webhook delivery |
 
 ## Maintenance rules
 

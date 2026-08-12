@@ -13,3 +13,4 @@ C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Debug\net8.0\S
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Debug\net8.0\refint\ServiceBus.Messaging.dll
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Debug\net8.0\ServiceBus.Messaging.pdb
 C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Debug\net8.0\ref\ServiceBus.Messaging.dll
+C:\POC\ServiceBusWorkspace\prototype\src\ServiceBus.Messaging\obj\Debug\net8.0\ServiceBus.Messaging.sourcelink.json

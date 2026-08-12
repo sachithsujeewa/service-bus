@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj": {}
+    "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj": {}
   },
   "projects": {
-    "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj": {
+    "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj",
+        "projectUniqueName": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj",
         "projectName": "SourceApp",
-        "projectPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj",
-        "packagesPath": "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\dedc398aad85da45fc748c245d176b59\\nuget",
-        "outputPath": "c:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\obj\\",
+        "projectPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\SourceApp.csproj",
+        "packagesPath": "C:\\Users\\ext_sachith\\AppData\\Local\\Temp\\cursor-sandbox-cache\\80370751b0568dd6e16b97a383cd09b2\\nuget",
+        "outputPath": "C:\\POC\\ServiceBusWorkspace\\prototype\\src\\SourceApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

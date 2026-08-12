@@ -28,8 +28,10 @@ public sealed class InMemoryMessageBus : IMessageBus
         await _management.Writer.WriteAsync(new BusMessage(json, null));
     }
 
-    public async Task RequeueDeliveryAsync(BusMessage message, CancellationToken ct = default)
+    public async Task RequeueDeliveryAsync(BusMessage message, IReadOnlyList<string> deliveredUrls, CancellationToken ct = default)
     {
-        await _delivery.Writer.WriteAsync(message with { RetryCount = message.RetryCount + 1 }, ct);
+        await _delivery.Writer.WriteAsync(
+            message with { RetryCount = message.RetryCount + 1, DeliveredUrls = deliveredUrls },
+            ct);
     }
 }
