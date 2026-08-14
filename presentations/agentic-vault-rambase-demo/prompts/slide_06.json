@@ -1,0 +1,43 @@
+{
+  "slide": 6,
+  "title": "What to take away",
+  "prompt": "# Codex PPT Slide Image Prompt\n\n## Canvas\n{\n  \"type\": \"16:9 full-slide PowerPoint image\",\n  \"language\": \"English\",\n  \"slide_number\": 6,\n  \"render_slide_number\": false\n}\n\n## Deck Goal\nIn 6–8 minutes including a short live demo, explain why vibe coding needed durable context and how the Agentic Knowledge Vault framework was applied to rediscover and modernize RamBase Service Bus.\n\n## Required Background\n{\n  \"deck_context\": {\n    \"source_summary\": \"ServiceBusWorkspace uses base/ as a generic agentic Obsidian vault framework. Raw historical Confluence-style evidence sits in _intake/. The vault/ folder is the RamBase Service Bus knowledge graph. prototype/ is a runnable Service Bus MVP (source → RabbitMQ bus → partner webhooks) built with that understanding.\",\n    \"core_claim\": \"A knowledge base alone is a book. Skills + micro-workflows + typed knowledge create a matured architect. RamBase Service Bus is the working proof.\",\n    \"canonical_terms\": [\n      \"vibe coding\",\n      \"Agentic Knowledge Vault\",\n      \"RamBase Service Bus\",\n      \"base/\",\n      \"_intake/\",\n      \"vault/\",\n      \"prototype/\",\n      \"Skills\",\n      \"Micro-workflows\",\n      \"Knowledge Graph\"\n    ],\n    \"forbidden_words\": [\n      \"Judge\",\n      \"judges\",\n      \"panel evaluation branding\"\n    ],\n    \"pain_points\": [\n      \"No durable contextual understanding\",\n      \"Scattered Confluence and people knowledge\",\n      \"Hidden dependencies\",\n      \"Partially manual\",\n      \"Time consuming\"\n    ],\n    \"demo_beats\": [\n      \"Domain question about RamBase Service Bus / vault\",\n      \"Ask for an improvement to the vault\"\n    ]\n  },\n  \"slide_local_context\": {\n    \"required_background\": \"Closing. No Judge wording.\"\n  }\n}\n\n## Global Style\n{\n  \"name\": \"手绘技术解释风\",\n  \"visual_direction\": \"clean English hand-drawn technical explainer, near-white paper background, thin sketch lines, light pencil hatching, small precise diagrams, restrained pastel markers, lots of whitespace\",\n  \"color_palette\": \"graphite #2F3437; accents pale blue #BFD7F1, sage #CFE2D1, peach #F4C7B8, lavender #D8C7EF; background #FCFBF7\",\n  \"typography\": \"restrained handwritten English titles and short labels\",\n  \"texture_and_finish\": \"paper sketch, calm article-illustration feel\",\n  \"deck_consistency\": \"same palette, typography mood, icon language, and airy density\"\n}\n\n## Input Images\n\n- Image 1: C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png — approved sample slide style reference; match style only; do not copy layout or content\n\n\n## Slide\n{\n  \"number\": 6,\n  \"title\": \"What to take away\",\n  \"role\": \"summary\",\n  \"intent\": \"Close with three transferable takeaways\"\n}\n\n## Text\n{\n  \"title\": \"What to take away\",\n  \"key_points\": [\n    \"Durable context beats re-prompting every time\",\n    \"Skills + knowledge graph = executable architecture literacy\",\n    \"Pattern transfers; RamBase Service Bus is the working proof\"\n  ],\n  \"speaker_focus\": null\n}\n\n## Layout\n{\n  \"composition\": \"three takeaway rows + small vault mark\",\n  \"relationship_to_previous_slide\": \"new layout\"\n}\n\n## Visual Elements\n{\n  \"main_visual\": \"three takeaway chips\",\n  \"supporting_elements\": \"small Service Bus / vault mark\"\n}\n\n## Constraints\n[\n  \"English only\",\n  \"No Judge wording\",\n  \"No page number\"\n]\n\n## Style Reference Rule\nUse Image 1 as the approved sample-slide style reference. Match its palette, typography mood, density, texture, and overall visual identity. Do not copy its exact layout unless this slide's layout explicitly asks for it.\n\n## Input Image Handling Rules\nFor any input image marked as a strict input asset, include it visibly and preserve its content. Do not redraw, replace, relabel, or invent a similar figure. Scale and crop only as needed for composition while keeping the important labels, arrows, data, and relationships recognizable.\n\n## Universal Constraints\n- The final image itself must contain the title and key points.\n- Render Chinese text exactly and legibly; avoid garbled characters.\n- Keep the confirmed deck style consistent while varying layout by slide role.\n- No watermark, unrelated logo, or extra slide number.\n",
+  "out": "slide_06.png",
+  "input_images": [
+    {
+      "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+      "role": "approved sample slide style reference",
+      "fidelity": "match style only; do not copy layout or content"
+    }
+  ],
+  "requires_context_images": true,
+  "expected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 4 RamBase application architecture",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+    "input_context_preparation": "read generated sample image after GenerateImage; pass as style-only reference",
+    "handoff_rule": "Subagents must use GenerateImage generate; return blocker if unavailable. Never use Pillow/HTML/SVG/python-pptx. Never write the word Judge."
+  },
+  "generation_contract": {
+    "must_use_selected_image_backend": true,
+    "must_match_sample_generation_method": true,
+    "forbidden_final_image_methods": [
+      "local drawing/rendering scripts",
+      "Pillow-generated slides",
+      "SVG/HTML/CSS/canvas screenshots",
+      "python-pptx/PptxGenJS/native PPT layout screenshots",
+      "manually composited text/image overlays"
+    ],
+    "must_return": [
+      "backend_used",
+      "selected_source",
+      "qa_note"
+    ]
+  }
+}

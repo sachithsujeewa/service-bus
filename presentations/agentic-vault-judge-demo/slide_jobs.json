@@ -1,0 +1,443 @@
+{
+  "run_status": "slides_recorded",
+  "deck_name": "agentic-vault-judge-demo",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 5 book-vs-architect metaphor",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+    "input_context_preparation": "view/read generated sample image after GenerateImage; pass approved sample path as style-only reference in later jobs",
+    "handoff_rule": "Subagents must use the same backend/tool/mode (GenerateImage generate); return a blocker if unavailable. Do not use Pillow/HTML/SVG/python-pptx."
+  },
+  "max_concurrent_slides": 5,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "Agentic Knowledge Vault",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "debc0b42-09b0-4dfe-8e34-94e9218a3b4b",
+        "agent_nickname": "slide_01-worker",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "44bd4fca8b5619f29dc03980f54dbc00fc0831249b7db0c2e31a15d5f89c48f0",
+        "dispatched_at": "2026-08-14T02:36:19Z"
+      },
+      "result": {
+        "agent_id": "debc0b42-09b0-4dfe-8e34-94e9218a3b4b",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_01.png",
+        "selected_source_sha256": "b4f6f6e1339f2a2854b90d3e46fbe4e072dc079bd3a0b5a9dcb90c0d148bbe4e",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "b4f6f6e1339f2a2854b90d3e46fbe4e072dc079bd3a0b5a9dcb90c0d148bbe4e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Cover readable; vault+architect metaphor matches style.",
+        "recorded_at": "2026-08-14T02:39:36Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "Why we triggered this",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "e7b26acf-14a3-4764-b417-4e911d4993ad",
+        "agent_nickname": "slide_02-worker",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "2eac7d7cf3b172390e25fa9fe85703330aa15b2add820b9c6bbf54690a43a634",
+        "dispatched_at": "2026-08-14T02:36:19Z"
+      },
+      "result": {
+        "agent_id": "e7b26acf-14a3-4764-b417-4e911d4993ad",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_02.png",
+        "selected_source_sha256": "df9d8a60db9769b84c7a7754812dcc70d32edb3ac5dd22c988b3ea4a6da695ac",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "df9d8a60db9769b84c7a7754812dcc70d32edb3ac5dd22c988b3ea4a6da695ac",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Cracking path metaphor clear; three key points visible.",
+        "recorded_at": "2026-08-14T02:39:36Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "The hidden tax of vibe coding",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "7b198362-2ea4-41f8-9222-a25a1b444fe9",
+        "agent_nickname": "slide_03-worker",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "f747a6a8c6dbee07209110d87e18af5f02287af4e90b32acaedd1acd21ee9e54",
+        "dispatched_at": "2026-08-14T02:36:20Z"
+      },
+      "result": {
+        "agent_id": "7b198362-2ea4-41f8-9222-a25a1b444fe9",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_03.png",
+        "selected_source_sha256": "e4ed79185fa7493016990e7cbb92e1ddc4be060906dc1f35812b030f8c6e7cbc",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "e4ed79185fa7493016990e7cbb92e1ddc4be060906dc1f35812b030f8c6e7cbc",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Five pain taxes readable around central TAX receipt.",
+        "recorded_at": "2026-08-14T02:39:37Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "Before vs After",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "e926c640-02be-4359-b74a-bcb9d6c2f432",
+        "agent_nickname": "slide_04-worker",
+        "prompt": "prompts/slide_04.json",
+        "prompt_sha256": "85542f3c7ac58a659a332a328480d9319df7b72d522ffaf8a53f7595585a5f5c",
+        "dispatched_at": "2026-08-14T02:36:20Z"
+      },
+      "result": {
+        "agent_id": "e926c640-02be-4359-b74a-bcb9d6c2f432",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_04.png",
+        "selected_source_sha256": "e1e969cbb782f01f06d99db1e59e124051e27e176d3fe1d8126c05a4dbfb5b76",
+        "final_image": "origin_image/slide_04.png",
+        "final_image_sha256": "e1e969cbb782f01f06d99db1e59e124051e27e176d3fe1d8126c05a4dbfb5b76",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Before/After panels clear with durable pipeline on right.",
+        "recorded_at": "2026-08-14T02:39:38Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "Knowledge alone is not enough",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "accepted",
+      "dispatch": null,
+      "result": {
+        "final_image": "origin_image/slide_05.png",
+        "accepted_sample": true
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "What we built — the base/ framework",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "fdc2399d-0ffb-44b3-bbc6-55b9f9fecd36",
+        "agent_nickname": "slide_06-worker",
+        "prompt": "prompts/slide_06.json",
+        "prompt_sha256": "23ffb5cb431566511520a5c175a1a349534feb6ff7b64e949351c7dda04e6bc0",
+        "dispatched_at": "2026-08-14T02:36:21Z"
+      },
+      "result": {
+        "agent_id": "fdc2399d-0ffb-44b3-bbc6-55b9f9fecd36",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_06.png",
+        "selected_source_sha256": "cc19a0abf0269cd27cc60f4d68520fde2e257fcae7f51376aa1783a0d945476a",
+        "final_image": "origin_image/slide_06.png",
+        "final_image_sha256": "cc19a0abf0269cd27cc60f4d68520fde2e257fcae7f51376aa1783a0d945476a",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Architecture flow and 9-step pipeline labels are legible.",
+        "recorded_at": "2026-08-14T02:39:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "A knowledge graph that evolves",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "542ad5a0-e06d-4bce-88dd-bf5034d19adb",
+        "agent_nickname": "slide-07-worker",
+        "prompt": "prompts/slide_07.json",
+        "prompt_sha256": "179db31a91529b8f6e584471224164527219ed2af57d10ea4b56444fbe4b6469",
+        "dispatched_at": "2026-08-14T02:40:11Z"
+      },
+      "result": {
+        "agent_id": "542ad5a0-e06d-4bce-88dd-bf5034d19adb",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_07.png",
+        "selected_source_sha256": "4bfba05b02d20182f15c6e67a9a5ba0ea439a19ae1ef86fb35fcf163b2575dc8",
+        "final_image": "origin_image/slide_07.png",
+        "final_image_sha256": "4bfba05b02d20182f15c6e67a9a5ba0ea439a19ae1ef86fb35fcf163b2575dc8",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Typed graph evolution Build/Evolve/Use is clear and readable.",
+        "recorded_at": "2026-08-14T02:42:49Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "Two kinds of work",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "f6e34965-82f6-427f-bc8d-564e57a5f516",
+        "agent_nickname": "slide-08-worker",
+        "prompt": "prompts/slide_08.json",
+        "prompt_sha256": "e5f27c813154b48aae3e8fa9733b045b1a098f122049424303baba95cc58f8d8",
+        "dispatched_at": "2026-08-14T02:40:11Z"
+      },
+      "result": {
+        "agent_id": "f6e34965-82f6-427f-bc8d-564e57a5f516",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_08.png",
+        "selected_source_sha256": "39d782f3e0e928d75604eb91f89c75e9bae4c41b2ac48bafa2d9b95c89ca66e3",
+        "final_image": "origin_image/slide_08.png",
+        "final_image_sha256": "39d782f3e0e928d75604eb91f89c75e9bae4c41b2ac48bafa2d9b95c89ca66e3",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Task A/B split with shared vault base is clear.",
+        "recorded_at": "2026-08-14T02:42:49Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "Breakthrough insight",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "43be952f-8946-48f7-b04a-611017b5474c",
+        "agent_nickname": "slide-09-worker",
+        "prompt": "prompts/slide_09.json",
+        "prompt_sha256": "9d7997e43a12b34b77874d08c914ab2ca10faeabecce2c4f04ff8e311342467f",
+        "dispatched_at": "2026-08-14T02:40:12Z"
+      },
+      "result": {
+        "agent_id": "43be952f-8946-48f7-b04a-611017b5474c",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_09.png",
+        "selected_source_sha256": "c71c748bd02f4d1690622c518678cf3cae0dbb4de19eebadc5cd9c30ee99943a",
+        "final_image": "origin_image/slide_09.png",
+        "final_image_sha256": "c71c748bd02f4d1690622c518678cf3cae0dbb4de19eebadc5cd9c30ee99943a",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Insight contrast before/after long-horizon is strong.",
+        "recorded_at": "2026-08-14T02:42:50Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "Demo agenda",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "d1bfa7c1-09d8-4337-9aa9-0ca826d36eeb",
+        "agent_nickname": "slide-10-worker",
+        "prompt": "prompts/slide_10.json",
+        "prompt_sha256": "52b85199216de4b08abcef2359a3a20814b22b5be4a172ef72689e5622242cec",
+        "dispatched_at": "2026-08-14T02:40:12Z"
+      },
+      "result": {
+        "agent_id": "d1bfa7c1-09d8-4337-9aa9-0ca826d36eeb",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_10.png",
+        "selected_source_sha256": "bfca1b145007c022f07fe3f20fb19f8ca8235cde3711f0f24fc07d0b5467593d",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "bfca1b145007c022f07fe3f20fb19f8ca8235cde3711f0f24fc07d0b5467593d",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Two demo cards sparse and presentation-ready.",
+        "recorded_at": "2026-08-14T02:42:50Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_11",
+      "number": 11,
+      "title": "What judges should take away",
+      "job": "prompts/slide_11.json",
+      "out": "origin_image/slide_11.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "57d761bf-a95e-431d-9986-b992196d0ec9",
+        "agent_nickname": "slide-11-worker",
+        "prompt": "prompts/slide_11.json",
+        "prompt_sha256": "8ab2d1ed3d56f7ec5131d6394d6ab4aaf8cefc98706e810744946314cde6565a",
+        "dispatched_at": "2026-08-14T02:40:12Z"
+      },
+      "result": {
+        "agent_id": "57d761bf-a95e-431d-9986-b992196d0ec9",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\slide_11.png",
+        "selected_source_sha256": "17e37e326b188f12e698ef73769b75512e41bf1f79904be17dbaaad6a182192c",
+        "final_image": "origin_image/slide_11.png",
+        "final_image_sha256": "17e37e326b188f12e698ef73769b75512e41bf1f79904be17dbaaad6a182192c",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Three takeaways plus closing ask are readable.",
+        "recorded_at": "2026-08-14T02:42:51Z"
+      },
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-08-14T02:42:51Z"
+}

@@ -1,0 +1,326 @@
+{
+  "deck_name": "agentic-vault-judge-demo",
+  "language": "English",
+  "goal": "Explain to a judge panel in ~10 minutes why vibe coding broke down and how the Agentic Knowledge Vault (base/) framework turns skills + micro-workflows + typed knowledge into durable, executable context.",
+  "deck_context": {
+    "source_summary": "Generic Agentic Obsidian Vault framework at ServiceBusWorkspace/base. Converts scattered raw notes into structured, typed knowledge via a 12-skill agent pipeline with human approval gates. Service Bus vault is the proof instance, not the product pitch.",
+    "core_claim": "A knowledge base alone is a book. Skills + micro-workflows + typed knowledge create a matured architect that can execute long-horizon work without re-explaining context every time.",
+    "canonical_terms": [
+      "vibe coding",
+      "Agentic Knowledge Vault",
+      "Knowledge Base",
+      "Skills",
+      "Micro-workflows",
+      "Knowledge Graph",
+      "Inbox",
+      "Skill Pipeline",
+      "long-horizon tasks",
+      "typed relationships"
+    ],
+    "pipeline_steps": "Intake → Classify → Retrieve → Plan → Generate → Link → Tag → Validate → Summarize",
+    "architecture_flow": "Human/Source → 00-Inbox → Knowledge Orchestrator → Skill Pipeline → Structured Vault (10-Knowledge) → Knowledge Graph → Human + Agent Understanding",
+    "pain_points": [
+      "NO durable contextual understanding",
+      "Hard to grab context (scattered Confluence, human resources)",
+      "Hidden dependencies",
+      "Partially manual",
+      "Time consuming"
+    ],
+    "two_task_types": [
+      "Understand the underlying structure of the existing product",
+      "Knowing that structure, execute tasks based on the given architecture"
+    ],
+    "demo_beats": [
+      "Ask a domain-relevant question against the vault",
+      "Ask for an improvement to the vault"
+    ]
+  },
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 5,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 5 book-vs-architect metaphor",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+    "input_context_preparation": "view/read generated sample image after GenerateImage; pass approved sample path as style-only reference in later jobs",
+    "handoff_rule": "Subagents must use the same backend/tool/mode (GenerateImage generate); return a blocker if unavailable. Do not use Pillow/HTML/SVG/python-pptx."
+  },
+  "style": {
+    "name": "手绘技术解释风",
+    "visual_direction": "clean English hand-drawn technical explainer, near-white paper background, thin sketch lines, light pencil hatching, small precise central diagram, restrained pastel markers, lots of whitespace, calm educational tone",
+    "color_palette": "line soft graphite #2F3437; accents pale blue #BFD7F1, sage green #CFE2D1, light peach #F4C7B8, pale lavender #D8C7EF; background near-white #FCFBF7",
+    "typography": "restrained handwritten English titles, short readable handwritten labels, sparse text, easy to inspect",
+    "texture_and_finish": "paper sketch / light pencil hatching, calm article-illustration feel not messy whiteboard",
+    "deck_consistency": "same palette, typography mood, icon language, texture, and airy density across all slides"
+  },
+  "approved_style_reference": {
+    "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+    "role": "approved sample slide style reference",
+    "fidelity": "match style only; do not copy layout or content"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "Agentic Knowledge Vault",
+      "role": "cover",
+      "intent": "Open the judge talk with brand-level framing",
+      "key_points": [
+        "From vibe coding to durable execution",
+        "Judge evaluation of the base/ framework",
+        "10-minute story"
+      ],
+      "local_context": {
+        "required_background": "This is the cover for a judge-panel presentation about the Agentic Knowledge Vault framework."
+      },
+      "layout": {
+        "composition": "large calm title, one vault+agent metaphor sketch, short subtitle; generous whitespace",
+        "relationship_to_previous_slide": "opening"
+      },
+      "visual_elements": {
+        "main_visual": "simple vault/safe sketch with a small agent or architect mark",
+        "supporting_elements": "thin underline, sparse pastel highlight"
+      },
+      "constraints": [
+        "English only",
+        "No dense body text",
+        "No page number"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Why we triggered this",
+      "role": "problem",
+      "intent": "Establish the trigger story: vibe coding worked until context broke",
+      "key_points": [
+        "Everyone is using vibe coding",
+        "We were in good shape — until scale hit",
+        "Every task needed fresh contextual understanding as input"
+      ],
+      "local_context": {
+        "required_background": "Team was productive with vibe coding, then realized each new task required re-feeding scattered context."
+      },
+      "layout": {
+        "composition": "smooth path that starts cracking; title top-left; 3 short labels around a central sketch",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "vibe-coding flow that develops cracks / friction marks",
+        "supporting_elements": "small callout 'good shape → why?'"
+      },
+      "constraints": ["English only", "Sparse labels", "No page number"]
+    },
+    {
+      "number": 3,
+      "title": "The hidden tax of vibe coding",
+      "role": "problem breakdown",
+      "intent": "Show five concrete pains in one airy composition",
+      "key_points": [
+        "NO durable contextual understanding",
+        "Scattered Confluence & human resources",
+        "Hidden dependencies",
+        "Partially manual",
+        "Time consuming"
+      ],
+      "local_context": {
+        "required_background": "Five pain points from the presenter notes; keep them equal weight, not a dense dashboard."
+      },
+      "layout": {
+        "composition": "five sparse icon+label clusters around a central 'tax' metaphor; not a KPI dashboard",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "five small hand-drawn icons for context, scattered docs, dependency chains, manual steps, clock",
+        "supporting_elements": "soft pastel marker dots"
+      },
+      "constraints": ["English only", "Exactly five pains visible", "No page number"]
+    },
+    {
+      "number": 4,
+      "title": "Before vs After",
+      "role": "comparison",
+      "intent": "Side-by-side operating modes for judges",
+      "key_points": [
+        "Before: chat-driven rediscovery, re-explain every time",
+        "After: Inbox → skills → knowledge graph → execute",
+        "Same goal, different operating system"
+      ],
+      "local_context": {
+        "required_background": "Left = continuous vibe guidance. Right = durable vault pipeline from base/ framework."
+      },
+      "layout": {
+        "composition": "two equal panels with a thin center arrow; before left, after right",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "left looping chat bubbles; right linear inbox-to-graph pipeline",
+        "supporting_elements": "BEFORE / AFTER labels"
+      },
+      "constraints": ["English only", "Clear left-right contrast", "No page number"]
+    },
+    {
+      "number": 5,
+      "title": "Knowledge alone is not enough",
+      "role": "concept",
+      "intent": "Core thesis metaphor: book vs matured architect",
+      "key_points": [
+        "Knowledge Base = content only, like a book",
+        "Skills + Micro-workflows + Knowledge = matured architect",
+        "Retrieve vs Execute"
+      ],
+      "local_context": {
+        "required_background": "Approved sample slide. Do not regenerate unless missing."
+      },
+      "layout": {
+        "composition": "book vs architect metaphor with retrieve vs execute takeaway",
+        "relationship_to_previous_slide": "continuation of solution intro"
+      },
+      "visual_elements": {
+        "main_visual": "open book vs architect with skills/micro-workflows/knowledge around execute gear"
+      },
+      "constraints": ["English only", "No page number"],
+      "sample_approved": true
+    },
+    {
+      "number": 6,
+      "title": "What we built — the base/ framework",
+      "role": "architecture",
+      "intent": "Show the agentic architecture judges need to understand",
+      "key_points": [
+        "Inbox → Orchestrator → Skill Pipeline → Vault → Graph",
+        "12 governable micro-workflow skills",
+        "Not one free-form agent"
+      ],
+      "local_context": {
+        "required_background": "Architecture flow: Human/Source → 00-Inbox → Knowledge Orchestrator → Skill Pipeline (Intake→Classify→Retrieve→Plan→Generate→Link→Tag→Validate→Summarize) → Structured Vault → Knowledge Graph → Human + Agent Understanding. Skills live in 04-Agent-Skills."
+      },
+      "layout": {
+        "composition": "vertical or left-to-right flow diagram with compact pipeline strip",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "hand-drawn architecture flowchart",
+        "supporting_elements": "small note '12 skills / micro-workflows'"
+      },
+      "constraints": ["English only", "Readable box labels", "No page number", "Do not screenshot UI"]
+    },
+    {
+      "number": 7,
+      "title": "A knowledge graph that evolves",
+      "role": "process",
+      "intent": "Show typed relationships growing and being used in long-horizon work",
+      "key_points": [
+        "Typed links: requires / depends_on / uses / validates",
+        "Build up and evolve over time",
+        "Used in long-horizon activities"
+      ],
+      "local_context": {
+        "required_background": "Knowledge graph is built from typed wiki-link annotations, not untyped related-to soup. It accumulates and supports multi-step agent activities."
+      },
+      "layout": {
+        "composition": "growing node graph with typed arrows and a build→evolve→use strip",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "hand-drawn knowledge graph with typed edge labels",
+        "supporting_elements": "timeline ticks build / evolve / use"
+      },
+      "constraints": ["English only", "Show typed edge labels", "No page number"]
+    },
+    {
+      "number": 8,
+      "title": "Two kinds of work",
+      "role": "concept",
+      "intent": "Split the work model into understanding vs execution",
+      "key_points": [
+        "Task A: Understand the underlying product structure",
+        "Task B: Execute tasks using that architecture",
+        "Same vault supports both"
+      ],
+      "local_context": {
+        "required_background": "Two task types from presenter notes; both rely on the vault."
+      },
+      "layout": {
+        "composition": "two large columns/cards with distinct icons; shared vault base underneath",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "Task A map/compass vs Task B checklist/execute icons",
+        "supporting_elements": "shared vault foundation"
+      },
+      "constraints": ["English only", "Equal visual weight for A and B", "No page number"]
+    },
+    {
+      "number": 9,
+      "title": "Breakthrough insight",
+      "role": "insight",
+      "intent": "State the key learning for judges",
+      "key_points": [
+        "Long-running tasks become possible",
+        "Not continuous vibe-code step guidance",
+        "Durable context enables longer horizons"
+      ],
+      "local_context": {
+        "required_background": "The team learned agents can execute longer activities when context lives in the vault instead of only in chat."
+      },
+      "layout": {
+        "composition": "large insight statement with small before/after cue sketches",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "big handwritten insight quote area",
+        "supporting_elements": "tiny continuous-guidance vs long-horizon icons"
+      },
+      "constraints": ["English only", "One dominant sentence", "No page number"]
+    },
+    {
+      "number": 10,
+      "title": "Demo agenda",
+      "role": "demo board",
+      "intent": "Give the presenter a clean live-demo backdrop",
+      "key_points": [
+        "Demo 1: Domain-relevant question",
+        "Demo 2: Ask for an improvement to the vault",
+        "Show understanding + structured update intent"
+      ],
+      "local_context": {
+        "required_background": "Live demos happen off-slide; this page is an agenda card for the judge panel."
+      },
+      "layout": {
+        "composition": "two large numbered demo cards with short labels; lots of whitespace",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "two big numbered cards (1 question, 2 improve vault)",
+        "supporting_elements": "small live-demo badge"
+      },
+      "constraints": ["English only", "Very sparse text for speaking over", "No page number"]
+    },
+    {
+      "number": 11,
+      "title": "What judges should take away",
+      "role": "summary",
+      "intent": "Close with three takeaways and an evaluation ask",
+      "key_points": [
+        "Durable context beats re-prompting every time",
+        "Skills + knowledge graph = executable architecture literacy",
+        "Evaluate the pattern; Service Bus vault is the proof instance"
+      ],
+      "local_context": {
+        "required_background": "Closing slide for judge Q&A. Framework is domain-agnostic."
+      },
+      "layout": {
+        "composition": "three takeaway labels + small vault mark; calm closing",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "three sparse takeaway chips and a tiny vault icon",
+        "supporting_elements": "closing ask note"
+      },
+      "constraints": ["English only", "Three clear takeaways", "No page number"]
+    }
+  ]
+}

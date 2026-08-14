@@ -1,0 +1,43 @@
+{
+  "slide": 6,
+  "title": "What we built — the base/ framework",
+  "prompt": "# Codex PPT Slide Image Prompt\n\n## Canvas\n{\n  \"type\": \"16:9 full-slide PowerPoint image\",\n  \"language\": \"English\",\n  \"slide_number\": 6,\n  \"render_slide_number\": false\n}\n\n## Deck Goal\nExplain to a judge panel in ~10 minutes why vibe coding broke down and how the Agentic Knowledge Vault (base/) framework turns skills + micro-workflows + typed knowledge into durable, executable context.\n\n## Required Background\n{\n  \"deck_context\": {\n    \"source_summary\": \"Generic Agentic Obsidian Vault framework at ServiceBusWorkspace/base. Converts scattered raw notes into structured, typed knowledge via a 12-skill agent pipeline with human approval gates. Service Bus vault is the proof instance, not the product pitch.\",\n    \"core_claim\": \"A knowledge base alone is a book. Skills + micro-workflows + typed knowledge create a matured architect that can execute long-horizon work without re-explaining context every time.\",\n    \"canonical_terms\": [\n      \"vibe coding\",\n      \"Agentic Knowledge Vault\",\n      \"Knowledge Base\",\n      \"Skills\",\n      \"Micro-workflows\",\n      \"Knowledge Graph\",\n      \"Inbox\",\n      \"Skill Pipeline\",\n      \"long-horizon tasks\",\n      \"typed relationships\"\n    ],\n    \"pipeline_steps\": \"Intake → Classify → Retrieve → Plan → Generate → Link → Tag → Validate → Summarize\",\n    \"architecture_flow\": \"Human/Source → 00-Inbox → Knowledge Orchestrator → Skill Pipeline → Structured Vault (10-Knowledge) → Knowledge Graph → Human + Agent Understanding\",\n    \"pain_points\": [\n      \"NO durable contextual understanding\",\n      \"Hard to grab context (scattered Confluence, human resources)\",\n      \"Hidden dependencies\",\n      \"Partially manual\",\n      \"Time consuming\"\n    ],\n    \"two_task_types\": [\n      \"Understand the underlying structure of the existing product\",\n      \"Knowing that structure, execute tasks based on the given architecture\"\n    ],\n    \"demo_beats\": [\n      \"Ask a domain-relevant question against the vault\",\n      \"Ask for an improvement to the vault\"\n    ]\n  },\n  \"slide_local_context\": {\n    \"required_background\": \"Architecture flow: Human/Source → 00-Inbox → Knowledge Orchestrator → Skill Pipeline (Intake→Classify→Retrieve→Plan→Generate→Link→Tag→Validate→Summarize) → Structured Vault → Knowledge Graph → Human + Agent Understanding. Skills live in 04-Agent-Skills.\"\n  }\n}\n\n## Global Style\n{\n  \"name\": \"手绘技术解释风\",\n  \"visual_direction\": \"clean English hand-drawn technical explainer, near-white paper background, thin sketch lines, light pencil hatching, small precise central diagram, restrained pastel markers, lots of whitespace, calm educational tone\",\n  \"color_palette\": \"line soft graphite #2F3437; accents pale blue #BFD7F1, sage green #CFE2D1, light peach #F4C7B8, pale lavender #D8C7EF; background near-white #FCFBF7\",\n  \"typography\": \"restrained handwritten English titles, short readable handwritten labels, sparse text, easy to inspect\",\n  \"texture_and_finish\": \"paper sketch / light pencil hatching, calm article-illustration feel not messy whiteboard\",\n  \"deck_consistency\": \"same palette, typography mood, icon language, texture, and airy density across all slides\"\n}\n\n## Input Images\n\n- Image 1: C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png — approved sample slide style reference; match style only; do not copy layout or content\n\n\n## Slide\n{\n  \"number\": 6,\n  \"title\": \"What we built — the base/ framework\",\n  \"role\": \"architecture\",\n  \"intent\": \"Show the agentic architecture judges need to understand\"\n}\n\n## Text\n{\n  \"title\": \"What we built — the base/ framework\",\n  \"key_points\": [\n    \"Inbox → Orchestrator → Skill Pipeline → Vault → Graph\",\n    \"12 governable micro-workflow skills\",\n    \"Not one free-form agent\"\n  ],\n  \"speaker_focus\": null\n}\n\n## Layout\n{\n  \"composition\": \"vertical or left-to-right flow diagram with compact pipeline strip\",\n  \"relationship_to_previous_slide\": \"new layout\"\n}\n\n## Visual Elements\n{\n  \"main_visual\": \"hand-drawn architecture flowchart\",\n  \"supporting_elements\": \"small note '12 skills / micro-workflows'\"\n}\n\n## Constraints\n[\n  \"English only\",\n  \"Readable box labels\",\n  \"No page number\",\n  \"Do not screenshot UI\"\n]\n\n## Style Reference Rule\nUse Image 1 as the approved sample-slide style reference. Match its palette, typography mood, density, texture, and overall visual identity. Do not copy its exact layout unless this slide's layout explicitly asks for it.\n\n## Input Image Handling Rules\nFor any input image marked as a strict input asset, include it visibly and preserve its content. Do not redraw, replace, relabel, or invent a similar figure. Scale and crop only as needed for composition while keeping the important labels, arrows, data, and relationships recognizable.\n\n## Universal Constraints\n- The final image itself must contain the title and key points.\n- Render Chinese text exactly and legibly; avoid garbled characters.\n- Keep the confirmed deck style consistent while varying layout by slide role.\n- No watermark, unrelated logo, or extra slide number.\n",
+  "out": "slide_06.png",
+  "input_images": [
+    {
+      "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+      "role": "approved sample slide style reference",
+      "fidelity": "match style only; do not copy layout or content"
+    }
+  ],
+  "requires_context_images": true,
+  "expected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 5 book-vs-architect metaphor",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-judge-demo/origin_image/slide_05.png",
+    "input_context_preparation": "view/read generated sample image after GenerateImage; pass approved sample path as style-only reference in later jobs",
+    "handoff_rule": "Subagents must use the same backend/tool/mode (GenerateImage generate); return a blocker if unavailable. Do not use Pillow/HTML/SVG/python-pptx."
+  },
+  "generation_contract": {
+    "must_use_selected_image_backend": true,
+    "must_match_sample_generation_method": true,
+    "forbidden_final_image_methods": [
+      "local drawing/rendering scripts",
+      "Pillow-generated slides",
+      "SVG/HTML/CSS/canvas screenshots",
+      "python-pptx/PptxGenJS/native PPT layout screenshots",
+      "manually composited text/image overlays"
+    ],
+    "must_return": [
+      "backend_used",
+      "selected_source",
+      "qa_note"
+    ]
+  }
+}

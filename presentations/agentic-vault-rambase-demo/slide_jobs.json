@@ -1,0 +1,243 @@
+{
+  "run_status": "slides_recorded",
+  "deck_name": "agentic-vault-rambase-demo",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 4 RamBase application architecture",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+    "input_context_preparation": "read generated sample image after GenerateImage; pass as style-only reference",
+    "handoff_rule": "Subagents must use GenerateImage generate; return blocker if unavailable. Never use Pillow/HTML/SVG/python-pptx. Never write the word Judge."
+  },
+  "max_concurrent_slides": 5,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "Agentic Knowledge Vault",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "4f94abe4-e739-4915-aa02-b720f7f463f3",
+        "agent_nickname": "s01",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "0192fefe58ecb0a639262778e52401f72ae2f0755183a320803904aea8e11d48",
+        "dispatched_at": "2026-08-14T05:30:52Z"
+      },
+      "result": {
+        "agent_id": "4f94abe4-e739-4915-aa02-b720f7f463f3",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\rambase_slide_01.png",
+        "selected_source_sha256": "2a9e4e8fc4e34734be8d746f78adc5cf48b37daab953204cba528307088375a8",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "2a9e4e8fc4e34734be8d746f78adc5cf48b37daab953204cba528307088375a8",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Cover clear; RamBase proof line; no Judge wording.",
+        "recorded_at": "2026-08-14T05:33:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "Why vibe coding hit a wall",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "98572d1f-b476-4613-b7cc-3037a4caaf6c",
+        "agent_nickname": "s02",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "63d9ff4e29e764e8e3bb5f608ca577ec418f094f152abed0c8840da3bbc0dabf",
+        "dispatched_at": "2026-08-14T05:30:52Z"
+      },
+      "result": {
+        "agent_id": "98572d1f-b476-4613-b7cc-3037a4caaf6c",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\rambase_slide_02.png",
+        "selected_source_sha256": "d06c2b2dc738b6520b88cd58115428e85529cff153cac5b52012303151bfbbae",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "d06c2b2dc738b6520b88cd58115428e85529cff153cac5b52012303151bfbbae",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Problem wall metaphor and five pains readable.",
+        "recorded_at": "2026-08-14T05:33:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "Knowledge alone is not enough",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "ff42e282-cbd0-4d25-ae4f-b8b0e396c3a6",
+        "agent_nickname": "s03",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "aa677eca1782a81ee435a226fdfda9a638a2425a619c01af3858eb683b1e3824",
+        "dispatched_at": "2026-08-14T05:30:52Z"
+      },
+      "result": {
+        "agent_id": "ff42e282-cbd0-4d25-ae4f-b8b0e396c3a6",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\rambase_slide_03.png",
+        "selected_source_sha256": "b1faabb43fefd9f05ea9c7f2340426c9e24a0b8cb2500abdd7311afe9f901bdd",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "b1faabb43fefd9f05ea9c7f2340426c9e24a0b8cb2500abdd7311afe9f901bdd",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Book vs architect thesis with before/after strip.",
+        "recorded_at": "2026-08-14T05:33:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "How we applied it to RamBase Service Bus",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "accepted",
+      "dispatch": null,
+      "result": {
+        "final_image": "origin_image/slide_04.png",
+        "accepted_sample": true
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "Demo",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "c542e57e-a863-49c1-8dae-36b105c2758d",
+        "agent_nickname": "s05",
+        "prompt": "prompts/slide_05.json",
+        "prompt_sha256": "ad64c7763adef71451c69b2008e39c5a6a943ed2392da1c40512e46b5a5e76ac",
+        "dispatched_at": "2026-08-14T05:30:52Z"
+      },
+      "result": {
+        "agent_id": "c542e57e-a863-49c1-8dae-36b105c2758d",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\rambase_slide_05.png",
+        "selected_source_sha256": "a3fb2a014cb5a2498dbc279e05d073151d5c890191374f51a7a8392416570a18",
+        "final_image": "origin_image/slide_05.png",
+        "final_image_sha256": "a3fb2a014cb5a2498dbc279e05d073151d5c890191374f51a7a8392416570a18",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Sparse two-card RamBase demo agenda.",
+        "recorded_at": "2026-08-14T05:33:40Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "What to take away",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [
+        {
+          "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "5845933b-1248-4ec1-8c24-2c1155884e27",
+        "agent_nickname": "s06",
+        "prompt": "prompts/slide_06.json",
+        "prompt_sha256": "e988063c6fade4a3efd489c7b37701997fdf604685fc15ea8d2dc811d54e44b3",
+        "dispatched_at": "2026-08-14T05:30:53Z"
+      },
+      "result": {
+        "agent_id": "5845933b-1248-4ec1-8c24-2c1155884e27",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\ext_sachith\\.cursor\\projects\\c-POC-codex-ppt-skill\\assets\\rambase_slide_06.png",
+        "selected_source_sha256": "77cb7350310cccc65d8bea08b39e4ca68386715783b258348a64efb8474dd822",
+        "final_image": "origin_image/slide_06.png",
+        "final_image_sha256": "77cb7350310cccc65d8bea08b39e4ca68386715783b258348a64efb8474dd822",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "GenerateImage"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Three takeaways with RamBase as working proof.",
+        "recorded_at": "2026-08-14T05:33:40Z"
+      },
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-08-14T05:33:40Z"
+}

@@ -1,0 +1,200 @@
+{
+  "deck_name": "agentic-vault-rambase-demo",
+  "language": "English",
+  "goal": "In 6–8 minutes including a short live demo, explain why vibe coding needed durable context and how the Agentic Knowledge Vault framework was applied to rediscover and modernize RamBase Service Bus.",
+  "deck_context": {
+    "source_summary": "ServiceBusWorkspace uses base/ as a generic agentic Obsidian vault framework. Raw historical Confluence-style evidence sits in _intake/. The vault/ folder is the RamBase Service Bus knowledge graph. prototype/ is a runnable Service Bus MVP (source → RabbitMQ bus → partner webhooks) built with that understanding.",
+    "core_claim": "A knowledge base alone is a book. Skills + micro-workflows + typed knowledge create a matured architect. RamBase Service Bus is the working proof.",
+    "canonical_terms": [
+      "vibe coding",
+      "Agentic Knowledge Vault",
+      "RamBase Service Bus",
+      "base/",
+      "_intake/",
+      "vault/",
+      "prototype/",
+      "Skills",
+      "Micro-workflows",
+      "Knowledge Graph"
+    ],
+    "forbidden_words": ["Judge", "judges", "panel evaluation branding"],
+    "pain_points": [
+      "No durable contextual understanding",
+      "Scattered Confluence and people knowledge",
+      "Hidden dependencies",
+      "Partially manual",
+      "Time consuming"
+    ],
+    "demo_beats": [
+      "Domain question about RamBase Service Bus / vault",
+      "Ask for an improvement to the vault"
+    ]
+  },
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 5,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "GenerateImage",
+    "mode": "generate",
+    "prompt_source": "parent-authored sample brief for slide 4 RamBase application architecture",
+    "size": "16:9 landscape",
+    "quality": "high",
+    "model_config": "Cursor GenerateImage tool, aspect_ratio 16:9",
+    "approved_sample_path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+    "input_context_preparation": "read generated sample image after GenerateImage; pass as style-only reference",
+    "handoff_rule": "Subagents must use GenerateImage generate; return blocker if unavailable. Never use Pillow/HTML/SVG/python-pptx. Never write the word Judge."
+  },
+  "style": {
+    "name": "手绘技术解释风",
+    "visual_direction": "clean English hand-drawn technical explainer, near-white paper background, thin sketch lines, light pencil hatching, small precise diagrams, restrained pastel markers, lots of whitespace",
+    "color_palette": "graphite #2F3437; accents pale blue #BFD7F1, sage #CFE2D1, peach #F4C7B8, lavender #D8C7EF; background #FCFBF7",
+    "typography": "restrained handwritten English titles and short labels",
+    "texture_and_finish": "paper sketch, calm article-illustration feel",
+    "deck_consistency": "same palette, typography mood, icon language, and airy density"
+  },
+  "approved_style_reference": {
+    "path": "C:/POC/ServiceBusWorkspace/presentations/agentic-vault-rambase-demo/origin_image/slide_04.png",
+    "role": "approved sample slide style reference",
+    "fidelity": "match style only; do not copy layout or content"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "Agentic Knowledge Vault",
+      "role": "cover",
+      "intent": "Open with product framing and RamBase as proof",
+      "key_points": [
+        "From vibe coding to durable execution",
+        "Proven on RamBase Service Bus",
+        "6–8 minute story + demo"
+      ],
+      "local_context": {
+        "required_background": "Cover for a short talk. Do NOT use the word Judge. RamBase Service Bus is the running example."
+      },
+      "layout": {
+        "composition": "large title, vault metaphor, short subtitle and proof line",
+        "relationship_to_previous_slide": "opening"
+      },
+      "visual_elements": {
+        "main_visual": "vault sketch with subtle event/bus cue",
+        "supporting_elements": "pastel underlines"
+      },
+      "constraints": ["English only", "No Judge wording", "No page number", "Sparse text"]
+    },
+    {
+      "number": 2,
+      "title": "Why vibe coding hit a wall",
+      "role": "problem",
+      "intent": "Merge trigger story and hidden tax into one slide",
+      "key_points": [
+        "Productive with vibe coding — until every task needed fresh context",
+        "No durable contextual understanding",
+        "Scattered Confluence & people; hidden dependencies; partially manual; time consuming"
+      ],
+      "local_context": {
+        "required_background": "RamBase example cue: rediscovering events/webhooks/Service Bus from scattered history. No Judge wording."
+      },
+      "layout": {
+        "composition": "cracking path metaphor plus compact pain labels in one airy page",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "path that starts smooth then cracks",
+        "supporting_elements": "4–5 small pain icons"
+      },
+      "constraints": ["English only", "No Judge wording", "No page number"]
+    },
+    {
+      "number": 3,
+      "title": "Knowledge alone is not enough",
+      "role": "concept",
+      "intent": "Core thesis plus before/after operating model",
+      "key_points": [
+        "Knowledge Base ≈ a book",
+        "Skills + Micro-workflows + Knowledge ≈ matured architect",
+        "Before: chat rediscovery · After: Inbox → skills → graph → execute"
+      ],
+      "local_context": {
+        "required_background": "Thesis slide. No Judge wording."
+      },
+      "layout": {
+        "composition": "book vs architect main metaphor with thin before/after strip at bottom",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "book vs architect/execute gear",
+        "supporting_elements": "mini before/after strip"
+      },
+      "constraints": ["English only", "No Judge wording", "No page number"]
+    },
+    {
+      "number": 4,
+      "title": "How we applied it to RamBase Service Bus",
+      "role": "architecture",
+      "intent": "Show framework and RamBase instance path",
+      "key_points": [
+        "Framework base/: Inbox → Orchestrator → Skill Pipeline → Vault → Graph",
+        "Instance: _intake/ → vault/ → prototype/",
+        "Understand the product, then execute on it"
+      ],
+      "local_context": {
+        "required_background": "Approved sample. Do not regenerate unless missing."
+      },
+      "layout": {
+        "composition": "two-layer framework + RamBase instance",
+        "relationship_to_previous_slide": "case application"
+      },
+      "visual_elements": {
+        "main_visual": "framework strip over RamBase path"
+      },
+      "constraints": ["English only", "No Judge wording", "No page number"],
+      "sample_approved": true
+    },
+    {
+      "number": 5,
+      "title": "Demo",
+      "role": "demo board",
+      "intent": "Live demo backdrop",
+      "key_points": [
+        "1. Domain question about RamBase Service Bus",
+        "2. Ask for an improvement to the vault",
+        "Show understanding + structured update intent"
+      ],
+      "local_context": {
+        "required_background": "Sparse demo cards. No Judge wording."
+      },
+      "layout": {
+        "composition": "two large numbered cards",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "two demo cards",
+        "supporting_elements": "live demo badge"
+      },
+      "constraints": ["English only", "No Judge wording", "Very sparse", "No page number"]
+    },
+    {
+      "number": 6,
+      "title": "What to take away",
+      "role": "summary",
+      "intent": "Close with three transferable takeaways",
+      "key_points": [
+        "Durable context beats re-prompting every time",
+        "Skills + knowledge graph = executable architecture literacy",
+        "Pattern transfers; RamBase Service Bus is the working proof"
+      ],
+      "local_context": {
+        "required_background": "Closing. No Judge wording."
+      },
+      "layout": {
+        "composition": "three takeaway rows + small vault mark",
+        "relationship_to_previous_slide": "new layout"
+      },
+      "visual_elements": {
+        "main_visual": "three takeaway chips",
+        "supporting_elements": "small Service Bus / vault mark"
+      },
+      "constraints": ["English only", "No Judge wording", "No page number"]
+    }
+  ]
+}
