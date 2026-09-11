@@ -19,6 +19,8 @@ Curated session logs for the Service Bus workspace.
 | 2026-08-11 | [webhook-routing-retry](2026-08-11-webhook-routing-retry.md) | Custom webhook to host machine; infinite partner inbox retry; dispatcher fix |
 | 2026-08-12 | [vault-architecture-overview](2026-08-12-vault-architecture-overview.md) | Explained Obsidian vault architecture (chapters, maps, pipeline) |
 | 2026-08-12 | [webhook-vs-breakpoint](2026-08-12-webhook-vs-breakpoint.md) | VS breakpoint on PrintEventReceiver; dispatcher reaches ashx with HTTP 400 |
+| 2026-08-14 | [visual-architecture-rabbitmq](2026-08-14-visual-architecture-rabbitmq.md) | AI visual diagrams; why RabbitMQ; visual-first explanation rule |
+| 2026-08-21 | [elevate-solution-writeup](2026-08-21-elevate-solution-writeup.md) | Filled Elevate 2026 `SOLUTION.md` from template |
 
 ## Quick “what happened when”
 

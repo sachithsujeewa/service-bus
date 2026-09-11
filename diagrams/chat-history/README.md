@@ -24,6 +24,7 @@ Curated summaries of Cursor agent sessions for the Service Bus workspace.
 | — | [_TEMPLATE-session.md](_TEMPLATE-session.md) | Copy for new session files |
 | 2026-07-30 | [2026-07-30-service-bus-vault-and-mvp.md](2026-07-30-service-bus-vault-and-mvp.md) | Vault, MVP scaffold, diagrams |
 | 2026-08-03 | [2026-08-03-mvp-demo-docker-and-uis.md](2026-08-03-mvp-demo-docker-and-uis.md) | Docker demo, UIs, fixes |
+| 2026-08-21 | [2026-08-21-elevate-solution-writeup.md](2026-08-21-elevate-solution-writeup.md) | Elevate `SOLUTION.md` |
 
 ## How to maintain
 

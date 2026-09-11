@@ -31,6 +31,8 @@ After meaningful work, **update logs before finishing**:
 
 Cursor rule: `.cursor/rules/chat-history-logging.mdc` (`alwaysApply: true`).
 
+**Explanations:** prefer AI-generated diagrams over text walls — `.cursor/rules/visual-first-explanations.mdc`.
+
 ## MVP demo (quick)
 
 ```bash

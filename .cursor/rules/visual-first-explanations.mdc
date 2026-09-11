@@ -1,0 +1,16 @@
+---
+description: Prefer AI-generated visual diagrams over text-heavy architecture explanations
+alwaysApply: true
+---
+
+# Visual-first explanations
+
+When the user asks to **explain**, **visualize**, or **understand** architecture, flows, or concepts in this workspace:
+
+1. **Lead with visuals** — generate 1–2 AI diagrams (`GenerateImage`) before long prose.
+2. **Keep text minimal** — short captions, small comparison tables, one-line summaries only.
+3. **Persist assets** — save images under `diagrams/<topic>/visuals/` and link from vault notes in `vault/11-New-System/` (or relevant chapter).
+4. **ASCII is secondary** — use existing `diagrams/*.md` ASCII for git diffs; do not replace with paragraph dumps.
+5. **Update index** — add row to `diagrams/README.md` when new visual assets are created.
+
+Avoid verbose bullet essays unless the user explicitly asks for deep written analysis.

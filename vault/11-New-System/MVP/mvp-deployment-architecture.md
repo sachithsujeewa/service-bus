@@ -8,6 +8,7 @@ status: active
 
 # MVP Deployment Architecture (Containerized Local)
 
+> **Visual guide (preferred):** [[mvp-visual-architecture-guide]]  
 > **Proposed design (pre-implementation):** `diagrams/mvp/00-proposed-mvp-architecture.md`  
 > This note documents the **as-built** Docker Compose topology.
 

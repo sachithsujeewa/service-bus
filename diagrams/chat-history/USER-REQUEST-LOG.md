@@ -74,11 +74,35 @@ For agent decisions and technical fixes, see session files in [INDEX.md](INDEX.m
 
 ---
 
+## 2026-08-14 — Visual architecture & RabbitMQ
+
+| # | Category | You asked | Outcome |
+|---|----------|-----------|---------|
+| U-031 | architecture | Visualize new architecture; explain RabbitMQ middleman — less text, more AI visuals | `diagrams/mvp/visuals/*.png`, [[mvp-visual-architecture-guide]], `.cursor/rules/visual-first-explanations.mdc` |
+| U-032 | architecture | Visual diagram of how things connect and RabbitMQ usage | `diagrams/mvp/visuals/rabbitmq-connections-mvp.png`; vault guide updated |
+| U-033 | architecture | Entity model — archive relationships + link to logical architecture | `diagrams/new-system/visuals/entity-model-archives-to-architecture.png`, [[entity-model-archives-architecture]] |
+| U-034 | architecture | Give me a visual diagram | `diagrams/mvp/visuals/service-bus-complete-visual.png` — one-page complete picture |
+| U-035 | architecture | Archive structures diagram with field names and types | `diagrams/legacy-baseline/visuals/archive-structures-field-reference.png`, [[archive-structures-visual]] |
+| U-036 | architecture | Generate a visual diagram | `diagrams/mvp/visuals/one-event-journey-flow.png` — ItmShipped end-to-end example |
+
+## 2026-08-21 — Elevate solution writeup
+
+| # | Category | You asked | Outcome |
+|---|----------|-----------|---------|
+| U-037 | documentation | Create `SOLUTION.md` from the Elevate 2026 template, elaborating each section | [SOLUTION.md](../../SOLUTION.md); diagrams in `diagrams/elevate/visuals/` |
+| U-038 | documentation | Do not use a fixed skill count; use the presentation decks as source | [SOLUTION.md](../../SOLUTION.md) rewritten from `presentations/` language; slides embedded |
+| U-039 | documentation | No relative links — submit as a sole document | Relative image/path links removed; Mermaid diagrams only |
+
+---
+
+---
+
 ## Quick lookup by topic
 
 | Topic | Request IDs |
 |-------|-------------|
 | Vault / knowledge graph | U-002, U-003, U-026 |
+| Elevate solution writeup | U-037, U-038, U-039 |
 | New system vs legacy | U-003, U-004, U-026 |
 | MVP design & prototype | U-005, U-006 |
 | Diagrams folder | U-009, U-010 |

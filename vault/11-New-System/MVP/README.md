@@ -13,6 +13,7 @@ Local runnable prototype: `prototype/` at workspace root.
 
 | Doc | Purpose |
 |-----|---------|
+| [[mvp-visual-architecture-guide]] | **Visual** architecture + why RabbitMQ (AI diagrams) |
 | [[mvp-use-case-catalog]] | Architectural + functional ASUCs for MVP |
 | [[mvp-technology-stack]] | Languages, libraries, auth, messaging |
 | `diagrams/mvp/00-proposed-mvp-architecture.md` | **Proposed** MVP architecture (five planes, MOCK/REAL) |

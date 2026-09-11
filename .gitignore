@@ -1,0 +1,27 @@
+﻿# Build
+**/bin/
+**/obj/
+*.user
+*.pdb
+*.dll
+*.exe
+*.cache
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+~$*
+*.tmp
+
+# Obsidian local workspace state (keep settings that are shared)
+.vault/.obsidian/workspace.json
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/graph.json
+
+# Cursor local (optional keep rules — we will add rules intentionally)
+
+# Large local decks (Bitbucket blocks files >= 100MB)
+presentations/**/*.pptx
+*.pptx

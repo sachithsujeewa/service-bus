@@ -10,6 +10,7 @@ diagrams/
 ├── legacy-baseline/            ← 10-Knowledge / historical synthesized model
 ├── new-system/               ← 11-New-System modernization & as-implemented discovery
 ├── mvp/                      ← prototype / local runnable stack
+├── elevate/                  ← ELEVATE 2026 solution-writeup visuals
 └── chat-history/             ← Cursor session summaries (maintain over time)
 ```
 
@@ -24,6 +25,14 @@ diagrams/
 | [03-knowledge-chain.md](legacy-baseline/03-knowledge-chain.md) | Business → domain → arch → design |
 | [04-agentic-vault-flow.md](legacy-baseline/04-agentic-vault-flow.md) | base/ skill pipeline |
 
+### Legacy visuals (AI-generated)
+
+| File | Title |
+|------|--------|
+| [visuals/archive-structures-field-reference.png](legacy-baseline/visuals/archive-structures-field-reference.png) | VET / EVR / WHT / WHA — fields + types |
+
+Vault note: `vault/10-Knowledge/Architecture/archive-structures-visual.md`
+
 ### New system (`11-New-System`)
 
 | File | Title |
@@ -34,6 +43,14 @@ diagrams/
 | [04-three-planes.md](new-system/04-three-planes.md) | Control / data / delivery / observability |
 | [05-chapter-isolation.md](new-system/05-chapter-isolation.md) | 10-Knowledge vs 11-New-System |
 | [06-broker-evaluation-landscape.md](new-system/06-broker-evaluation-landscape.md) | Migration broker options |
+
+### New system visuals (AI-generated)
+
+| File | Title |
+|------|--------|
+| [visuals/entity-model-archives-to-architecture.png](new-system/visuals/entity-model-archives-to-architecture.png) | RamBase archives → logical architecture → MVP entities |
+
+Vault note: `vault/11-New-System/Target-Architecture/entity-model-archives-architecture.md`
 
 ### MVP prototype
 
@@ -46,6 +63,26 @@ diagrams/
 | [04-auth-flow.md](mvp/04-auth-flow.md) | API keys + HMAC |
 | [05-rabbitmq-topology.md](mvp/05-rabbitmq-topology.md) | Exchanges, queues, DLQ |
 | [06-deployment-modes.md](mvp/06-deployment-modes.md) | Docker, local dev, K8s target |
+
+### MVP visuals (AI-generated)
+
+| File | Title |
+|------|--------|
+| [visuals/service-bus-2-architecture.png](mvp/visuals/service-bus-2-architecture.png) | Service Bus 2.0 — five planes |
+| [visuals/why-rabbitmq-middleman.png](mvp/visuals/why-rabbitmq-middleman.png) | Why RabbitMQ in the middle (with vs without) |
+| [visuals/rabbitmq-connections-mvp.png](mvp/visuals/rabbitmq-connections-mvp.png) | Full stack connections + RabbitMQ exchanges/queues |
+| [visuals/service-bus-complete-visual.png](mvp/visuals/service-bus-complete-visual.png) | **One-page** archives → services → RabbitMQ → delivery |
+| [visuals/one-event-journey-flow.png](mvp/visuals/one-event-journey-flow.png) | **Example flow** — ItmShipped EVR → broker → partner |
+
+Vault note: `vault/11-New-System/MVP/mvp-visual-architecture-guide.md`
+
+### Elevate 2026 solution writeup
+
+| File | Title |
+|------|--------|
+| [../SOLUTION.md](../SOLUTION.md) | ELEVATE 2026 solution writeup (template filled) |
+| [elevate/visuals/agentic-vault-before-after.png](elevate/visuals/agentic-vault-before-after.png) | Before (vibe loop) vs after (durable pipeline) |
+| [elevate/visuals/agentic-vault-solution-pipeline.png](elevate/visuals/agentic-vault-solution-pipeline.png) | Inbox → skill pipeline → vault/graph → execute |
 
 ### Chat history
 
@@ -61,6 +98,7 @@ diagrams/
 | [2026-08-11-webhook-routing-retry.md](chat-history/2026-08-11-webhook-routing-retry.md) | Custom host webhook; partner inbox retry fix |
 | [2026-08-12-vault-architecture-overview.md](chat-history/2026-08-12-vault-architecture-overview.md) | Explained Obsidian vault architecture |
 | [2026-08-12-webhook-vs-breakpoint.md](chat-history/2026-08-12-webhook-vs-breakpoint.md) | VS ashx breakpoint / host webhook delivery |
+| [2026-08-21-elevate-solution-writeup.md](chat-history/2026-08-21-elevate-solution-writeup.md) | Elevate `SOLUTION.md` writeup |
 
 ## Maintenance rules
 
