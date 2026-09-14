@@ -99,6 +99,7 @@ Vault note: `vault/11-New-System/MVP/mvp-visual-architecture-guide.md`
 | [2026-08-12-vault-architecture-overview.md](chat-history/2026-08-12-vault-architecture-overview.md) | Explained Obsidian vault architecture |
 | [2026-08-12-webhook-vs-breakpoint.md](chat-history/2026-08-12-webhook-vs-breakpoint.md) | VS ashx breakpoint / host webhook delivery |
 | [2026-08-21-elevate-solution-writeup.md](chat-history/2026-08-21-elevate-solution-writeup.md) | Elevate `SOLUTION.md` writeup |
+| [2026-09-14-atlassian-plugin-vs-cloud-agents.md](chat-history/2026-09-14-atlassian-plugin-vs-cloud-agents.md) | Atlassian plugin vs Cloud Agent repos |
 
 ## Maintenance rules
 
