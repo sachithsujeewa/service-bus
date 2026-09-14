@@ -1,12 +1,13 @@
 # Session: 2026-09-14 — atlassian-plugin-vs-cloud-agents
 
-Full user log: [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) (U-040).
+Full user log: [USER-REQUEST-LOG.md](USER-REQUEST-LOG.md) (U-040 … U-041).
 
 ## User requests (this session)
 
 | ID | Category | You asked | Outcome |
 |----|----------|-----------|---------|
 | U-040 | troubleshooting | Why can’t I create Cloud Agents against Atlassian repos after adding the Atlassian plugin? | Plugin is Jira/Confluence MCP, not SCM. Cloud Agents need GitHub/GitLab/Bitbucket Cloud/Azure DevOps under Dashboard → Integrations. This run is bound to `github.com/sachithsujeewa/service-bus`. |
+| U-041 | troubleshooting | After adding Bitbucket, list Bitbucket repos | Connecting Bitbucket does not retrofit this GitHub VM. Public API: `rambase/costemplates`. Private workspace not enumerable here. |
 
 ## Goal
 
@@ -33,7 +34,8 @@ Explain why the Atlassian marketplace plugin does not make Atlassian-hosted git 
 
 ## Open items
 
-- [ ] If the intended git host is **Bitbucket Cloud**, connect it under Cursor Dashboard → Integrations (personal Bitbucket OAuth + workspace Cursor app).
+- [x] Connect Bitbucket Cloud under Cursor Dashboard → Integrations (user reported added; this running agent still has no Bitbucket clone token).
+- [ ] Start a **new** Cloud Agent from [cursor.com/agents](https://cursor.com/agents) and pick a `bitbucket.org/rambase/...` repo in the repo picker.
 - [ ] If the intended git host is **Bitbucket Data Center**, managed Cloud Agents are not supported (Bugbot only).
 - [ ] If “repos” meant Jira/Confluence, keep using the Atlassian plugin from an agent already running on a GitHub/GitLab/Bitbucket Cloud repo.
 

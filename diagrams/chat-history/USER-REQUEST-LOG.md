@@ -98,6 +98,7 @@ For agent decisions and technical fixes, see session files in [INDEX.md](INDEX.m
 | # | Category | You asked | Outcome |
 |---|----------|-----------|---------|
 | U-040 | troubleshooting | Why can’t I create Cloud Agents against Atlassian repos after adding the Atlassian plugin? | Plugin is Jira/Confluence MCP (`rambase.atlassian.net`), not git. Cloud Agents clone from Dashboard → Integrations (GitHub/GitLab/Bitbucket Cloud/Azure DevOps). This environment only has `github.com/sachithsujeewa/service-bus`. |
+| U-041 | troubleshooting | After adding Bitbucket, list Bitbucket repos | This GitHub-bound Cloud Agent still has no Bitbucket token. Public API: `rambase/costemplates` only. Partial Jira/Confluence mentions listed; live workspace listing needs a new agent started on a Bitbucket repo. |
 
 ---
 
